@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-4PMXTMQXM4"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  // Replace with your GA4 Measurement ID
+  gtag('config', 'G-4PMXTMQXM4');
+</script>
+
+  <link rel="icon" class="rounded-full" href="thumbnails/theS.png" type="image/x-icon">
+   <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+/>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Web Apps & Systems | Synlotech Technologies</title>
+  <meta name="description"
+    content="Custom web applications and internal systems that automate workflows, reduce manual work, and scale with your business." />
+
+    <!-- TAILWIND CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- CUSTOM CONFIG -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#2563EB',
+            accent: '#38BDF8',
+            dark: '#020617',
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    /* Scroll-triggered animations */
+    .animate-on-scroll {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    }
+
+    .animate-on-scroll.in-view {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+
+  <style>
+    .bar {
+  position: absolute;
+  width: 24px;
+  height: 2.5px;              /* thicker = visible */
+  background-color: #ffffff; /* force white */
+  border-radius: 999px;
+  transition: all 0.3s ease;
+}
+
+.top { transform: translateY(-7px); }
+.middle { opacity: 1; }
+.bottom { transform: translateY(7px); }
+
+/* OPEN STATE */
+.open .top {
+  transform: rotate(45deg);
+}
+
+.open .middle {
+  opacity: 0;
+}
+
+.open .bottom {
+  transform: rotate(-45deg);
+}
+
+
+@keyframes whatsappPulse { 0% { box-shadow: 0 0 0 0 rgba(37, 99, 235, 0.6); } 70% { box-shadow: 0 0 0 14px rgba(37, 99, 235, 0); } 100% { box-shadow: 0 0 0 0 rgba(37, 99, 235, 0); } } 
+.whatsapp-pulse { animation: whatsappPulse 2.5s infinite; }
+
+  </style>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Synlotech Technologies",
+  "url": "https://synlotech.com",
+  "logo": "https://synlotech.com/images/logo.png",
+  "description": "Synlotech Technologies specializes in stunning website design, responsive web development, graphics, motion visuals, and 3D animations.",
+  "sameAs": [
+    "https://instagram.com/synlotech",
+    "https://facebook.com/synlotech",
+    "https://linkedin.com/company/synlotech"
+  ],
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "telephone": "+255788296274",
+    "contactType": "customer service",
+    "areaServed": "Worldwide",
+    "availableLanguage": ["English"]
+  }
+}
+</script>
+</head>
+
+<body style="font-family: inter;" class="bg-dark text-white opacity-0 transition-opacity duration-700 ease-out">
+ <!-- NAVBAR -->
+   <!-- NAVBAR -->
+  <header class="fixed top-0 inset-x-0 z-50 backdrop-blur bg-dark/90 border-b border-white/5 py-3">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="flex items-center justify-between h-20">
+
+       <!-- LOGO -->
+         <div style="margin-bottom: 30px;">
+        <a href="homepage.html#home"  class="text-2xl font-extrabold text-primary tracking-tight">
+          <img style="width: 40px;
+          height: 45px;
+          display: inline-block;
+          " loading="lazy" src="thumbnails/theS.png">
+        
+         <p  class="text-xl font-extrabold text-white tracking-tight" style="display: inline-block;
+         margin-top: 35px;
+          ">
+          <span style="font-size: 1.2rem;" >SYNLOTECH</span><br>
+          </p>
+          </a>
+         </div>
+
+        <!-- DESKTOP NAV -->
+        <nav class="hidden md:flex items-center gap-8 text-sm font-medium">
+          <a href="homepage.html#services" class="hover:text-primary transition">Services</a>
+          <a href="homepage.html#work" class="hover:text-primary transition">Work</a>
+          <a href="homepage.html#process" class="hover:text-primary transition">Process</a>
+          <a href="homepage.html#contact-form" class="hover:text-primary transition">Contact Us</a>
+        </nav>
+
+        <!-- CTA -->
+        <div class="hidden md:block">
+          <a href="homepage.html#contact-form"
+             class="px-5 py-2.5 rounded-lg bg-primary text-white font-semibold
+                    hover:bg-blue-700 transition shadow-lg shadow-primary/30">
+            Get a Quote
+          </a>
+        </div>
+
+        <!-- MOBILE MENU BUTTON -->
+       <button
+  id="menuBtn"
+  class="md:hidden relative w-10 h-10 flex items-center justify-center
+         z-50 rounded-md hover: transition"
+  aria-label="Open menu"
+>
+  <span class="bar top"></span>
+  <span class="bar middle"></span>
+  <span class="bar bottom"></span>
+</button>
+
+      </div>
+    </div>
+
+    <!-- MOBILE MENU -->
+    <div id="mobileMenu"
+  class="md:hidden absolute top-full left-0 w-full
+         bg-dark backdrop-blur
+         transform scale-y-0 origin-top
+         opacity-0
+         transition-all duration-300 ease-out">
+
+      <nav class="px-6 py-6 flex flex-col gap-4 text-sm font-medium border-t text-center border-white/10">
+        <a href="homepage.html#services" class="hover:text-primary">Services</a>
+        <a href="homepage.html#work" class="hover:text-primary">Work</a>
+        <a href="homepage.html#process" class="hover:text-primary">Process</a>
+        <a href="homepage.html#contact-form" class="hover:text-primary">Contact Us</a>
+
+        <a href="homepage.html#contact-form"
+           class="mt-4 inline-flex justify-center px-6 py-3 rounded-lg bg-primary text-white font-semibold">
+          Get a Quote
+        </a>
+      </nav>
+    </div>
+  </header>
+
+<!-- HERO -->
+<!-- HERO WITH IMAGE -->
+<section class="animate-on-scroll pt-40 pb-24">
+  <div class="max-w-7xl mx-auto px-6">
+    <div class="grid lg:grid-cols-2 gap-12 items-center">
+
+      <!-- LEFT: Text content -->
+      <div class="max-w-xl">
+        <h1 class="text-4xl sm:text-5xl font-extrabold leading-tight">
+          Web Apps & Systems
+        </h1>
+        <p class="mt-6 text-slate-300 text-lg">
+          We build secure, scalable web applications and internal systems that
+          automate processes, reduce costs, and give you full control over your operations.
+        </p>
+
+        <div class="mt-8 flex flex-wrap gap-4">
+          <a href="homepage.html#contact-form"
+            class="px-8 py-4 bg-primary rounded-xl font-semibold hover:bg-blue-700 transition">
+            Request a Quote
+          </a>
+          <a href="#use-cases"
+            class="px-8 py-4 border border-white/20 rounded-xl font-semibold hover:border-primary transition">
+            See Use Cases
+          </a>
+        </div>
+      </div>
+
+      <!-- RIGHT: Hero image -->
+      <div class="relative w-full h-80 sm:h-96 lg:h-96 rounded-3xl overflow-hidden">
+        <img loading="lazy" 
+          src="thumbnails/webapp.png" 
+          alt="Web Apps & Systems Illustration" 
+          class="w-full h-full object-cover rounded-3xl shadow-lg shadow-primary/30"
+        >
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- WHAT WE BUILD -->
+<section class="animate-on-scroll py-24 bg-white/5">
+  <div class="max-w-7xl mx-auto px-6">
+    <h2 class="text-3xl font-bold mb-12">What We Build</h2>
+
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div class="p-6 rounded-xl bg-white/5 border border-white/10">
+        <h3 class="font-semibold mb-2">Business Dashboards</h3>
+        <p class="text-slate-300 text-sm">
+          Real-time dashboards to monitor sales, users, and performance.
+        </p>
+      </div>
+
+      <div class="p-6 rounded-xl bg-white/5 border border-white/10">
+        <h3 class="font-semibold mb-2">Admin Panels</h3>
+        <p class="text-slate-300 text-sm">
+          Secure admin systems to manage data, users, and content.
+        </p>
+      </div>
+
+      <div class="p-6 rounded-xl bg-white/5 border border-white/10">
+        <h3 class="font-semibold mb-2">Booking & Management Systems</h3>
+        <p class="text-slate-300 text-sm">
+          Custom booking, scheduling, and workflow automation.
+        </p>
+      </div>
+
+      <div class="p-6 rounded-xl bg-white/5 border border-white/10">
+        <h3 class="font-semibold mb-2">E-commerce & Ordering Systems</h3>
+        <p class="text-slate-300 text-sm">
+          Custom e-commerce logic beyond basic templates.
+        </p>
+      </div>
+
+      <div class="p-6 rounded-xl bg-white/5 border border-white/10">
+        <h3 class="font-semibold mb-2">APIs & Integrations</h3>
+        <p class="text-slate-300 text-sm">
+          Payment gateways, SMS, email, WhatsApp, and third-party APIs.
+        </p>
+      </div>
+
+      <div class="p-6 rounded-xl bg-white/5 border border-white/10">
+        <h3 class="font-semibold mb-2">SaaS Platforms</h3>
+        <p class="text-slate-300 text-sm">
+          Multi-user systems built for growth and scalability.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHO THIS IS FOR -->
+<section id="use-cases" class="animate-on-scroll py-24">
+  <div class="max-w-7xl mx-auto px-6">
+    <h2 class="text-3xl font-bold mb-8">Who This Is For</h2>
+
+    <ul class="grid sm:grid-cols-2 gap-6 text-slate-300">
+      <li>✔ Businesses tired of manual work</li>
+      <li>✔ Schools, hospitals & institutions</li>
+      <li>✔ Startups building digital products</li>
+      <li>✔ Companies outgrowing spreadsheets</li>
+    </ul>
+  </div>
+</section>
+
+<!-- HOW WE WORK -->
+<section class="animate-on-scroll py-24 bg-white/5">
+  <div class="max-w-7xl mx-auto px-6">
+    <h2 class="text-3xl font-bold mb-12">How We Build Your System</h2>
+
+    <div class="grid md:grid-cols-4 gap-8">
+      <div>
+        <span class="text-primary font-bold">01</span>
+        <h3 class="font-semibold mt-2">System Planning</h3>
+        <p class="text-slate-300 text-sm">
+          Requirements, workflows, and architecture design.
+        </p>
+      </div>
+
+      <div>
+        <span class="text-primary font-bold">02</span>
+        <h3 class="font-semibold mt-2">UI & UX Design</h3>
+        <p class="text-slate-300 text-sm">
+          Clean interfaces focused on usability.
+        </p>
+      </div>
+
+      <div>
+        <span class="text-primary font-bold">03</span>
+        <h3 class="font-semibold mt-2">Development</h3>
+        <p class="text-slate-300 text-sm">
+          Secure, scalable, and well-documented code.
+        </p>
+      </div>
+
+      <div>
+        <span class="text-primary font-bold">04</span>
+        <h3 class="font-semibold mt-2">Testing & Deployment</h3>
+        <p class="text-slate-300 text-sm">
+          QA, security checks, and production launch.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="animate-on-scroll py-24">
+  <div class="max-w-4xl mx-auto px-6 text-center">
+    <h2 class="text-3xl font-bold">
+      Ready to Build Your Custom System?
+    </h2>
+    <p class="mt-4 text-slate-300">
+      Tell us what you want to automate — we’ll design the solution.
+    </p>
+
+    <a href="homepage.html#contact-form"
+      class="inline-block mt-8 px-10 py-4 bg-primary rounded-xl font-semibold hover:bg-blue-700 transition">
+      Start Your Project
+    </a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+ <footer class="relative bg-dark border-t border-white/10 pt-16">
+  <div class="max-w-7xl mx-auto px-6">
+
+    <div class="pb-12">
+      <!-- AUTO-FIT GRID (THE FIX) -->
+      <div class="grid gap-12 grid-cols-[repeat(auto-fit,minmax(220px,1fr))]">
+
+        <!-- CONTACT -->
+        <div>
+          <h3 class="text-white text-xl font-bold mb-4">Contact Us</h3>
+          <p class="text-white text-sm mb-2">
+            Email:
+            <a href="mailto:synlotech@outlook.com" class="text-gray-400 hover:text-primary transition">
+              synlotech@outlook.com
+            </a>
+          </p>
+          <p class="text-white text-sm">
+            WhatsApp:
+            <a href="https://wa.me/255788296274" class="text-gray-400 hover:text-primary transition">
+              Chat Now
+            </a>
+          </p>
+        </div>
+
+        <!-- SOCIAL -->
+       <div>
+  <h3 class="text-white text-xl font-bold mb-4">Follow Us</h3>
+  <div class="flex gap-4">
+    <a href="https://www.linkedin.com/in/synlotech-technologies-7252933b2" target="_blank" class="text-gray-400 hover:text-primary transition">
+      <i class="fa-brands fa-linkedin-in"></i>
+    </a>
+
+    <a href="https://www.instagram.com/synlo_tech" target="_blank" class="text-gray-400 hover:text-primary transition">
+      <i class="fa-brands fa-instagram"></i>
+    </a>
+
+    <a href="https://x.com/synlotech" target="_blank" class="text-gray-400 hover:text-primary transition">
+      <i class="fa-brands fa-x-twitter"></i>
+    </a>
+  </div>
+</div>
+
+        <!-- POLICIES -->
+        <div>
+          <h3 class="text-white text-xl font-bold mb-4">Policies</h3>
+          <p class="text-slate-300 text-sm">
+            <a href="Privacy-Policy.html" class="text-gray-400 hover:text-primary transition">Privacy Policy</a>
+            <span class="mx-2">|</span>
+            <a href="Terms-Of-Service.html" class="text-gray-400 hover:text-primary transition">Terms of Service</a>
+            <span class="mx-2">|</span>
+            <a href="disclaimer.html" class="text-gray-400 hover:text-primary transition">Disclaimer</a>
+          </p>
+        </div>
+
+        <!-- QUICK LINKS -->
+        <div>
+          <h4 class="text-white font-bold mb-4">Quick Links</h4>
+          <ul class="space-y-2">
+            <li><a href="homepage.html#services" class="text-gray-400 hover:text-primary transition">Services</a></li>
+            <li><a href="homepage.html#work" class="text-gray-400 hover:text-primary transition">Work</a></li>
+            <li><a href="homepage.html#process" class="text-gray-400 hover:text-primary transition">Process</a></li>
+            <li><a href="homepage.html#contact-form" class="text-gray-400 hover:text-primary transition">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <!-- NEWSLETTER -->
+
+         <div>
+  <h3 class="mb-5">Subscribe to Our Newsletter</h3>
+
+  <form 
+    action="https://formspree.io/f/mwvnvdko" 
+    method="POST"
+    class="flex flex-col gap-2"
+  >
+    <input 
+      type="email" 
+      name="email"
+      placeholder="Your email"
+      required
+      class="w-full px-3 py-4 rounded-lg mb-4 bg-white/5 border border-white/10 text-white text-sm focus:outline-none focus:border-primary"
+    />
+
+    <button 
+      type="submit"
+      class="w-full px-4 py-2 rounded-lg bg-primary text-white text-sm font-semibold hover:opacity-90 transition"
+    >
+      Subscribe
+    </button>
+  </form>
+</div>
+
+
+        <!-- BRANDING -->
+        <div>
+          <a href="homepage.html#home" class="flex items-center gap-3">
+            <img loading="lazy" src="thumbnails/theS.png" class="w-10 h-11 object-contain">
+            <p class="text-xl font-extrabold text-white leading-tight">
+              SYNLOTECH <br> TECHNOLOGIES
+            </p>
+          </a>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- BOTTOM -->
+    <div class="border-t border-white/10 py-6 text-center">
+      <p class="text-slate-400 text-sm">
+        © 2026 SYNLOTECH TECHNOLOGIES. All rights reserved.
+      </p>
+    </div>
+
+  </div>
+</footer>
+
+<script>
+   const btn = document.getElementById('menuBtn');
+const menu = document.getElementById('mobileMenu');
+
+btn.addEventListener('click', () => {
+  btn.classList.toggle('open');
+  menu.classList.toggle('scale-y-0');
+  menu.classList.toggle('opacity-0');
+
+});
+
+  window.addEventListener('load', () => {
+    document.body.classList.remove('opacity-0');
+  });
+
+  // Scroll-triggered animation for sections
+  const observerOptions = {
+    threshold: 0.1,
+    rootMargin: '0px 0px -50px 0px'
+  };
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('in-view');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, observerOptions);
+
+  document.querySelectorAll('.animate-on-scroll').forEach(section => {
+    observer.observe(section);
+  });
+</script>
+
+ 
+  <a href="https://wa.me/255788296274" target="_blank" aria-label="Chat on WhatsApp" class="fixed bottom-6 right-5 z-50 group"> 
+    <div class="flex items-center gap-3">
+     <!-- Optional Tooltip --> 
+      <span class="hidden md:block opacity-0 group-hover:opacity-100 translate-x-2 group-hover:translate-x-0 transition-all duration-300 bg-dark text-white text-sm px-4 py-2 rounded-lg shadow-lg"> Chat with us </span> 
+      <!-- Button --> <div class="w-14 h-14 rounded-full bg-green-500 flex items-center justify-center shadow-lg shadow-green-500/80 hover:scale-110 hover:shadow-green-500/60 transition-all duration-300"> <i class="fa-brands fa-whatsapp text-white text-2xl"></i> 
+      </div>
+     </div>
+     </a>
+
+     <a href="tel:+255788296274" target="_blank" aria-label="Call us" class="fixed bottom-24 right-5 z-50 group"> 
+  <div class="flex items-center gap-3">
+
+    <!-- Optional Tooltip --> 
+    <span class="hidden md:block opacity-0 group-hover:opacity-100 translate-x-2 group-hover:translate-x-0 transition-all duration-300 bg-dark text-white text-sm px-4 py-2 rounded-lg shadow-lg">
+      Call us
+    </span> 
+
+    <!-- Button --> 
+    <div class="w-14 h-14 rounded-full bg-primary flex items-center justify-center shadow-lg shadow-primary/80 hover:scale-110 hover:shadow-primary/60 transition-all duration-300"> 
+      <i class="fa-solid fa-phone text-white text-2xl"></i>
+    </div>
+
+  </div>
+</a>
+
+  <a href="tel:+255788296274" target="_blank" aria-label="Call us" class="fixed bottom-24 right-5 z-50 group"> 
+  <div class="flex items-center gap-3">
+
+    <!-- Optional Tooltip --> 
+    <span class="hidden md:block opacity-0 group-hover:opacity-100 translate-x-2 group-hover:translate-x-0 transition-all duration-300 bg-dark text-white text-sm px-4 py-2 rounded-lg shadow-lg">
+      Call us
+    </span> 
+
+    <!-- Button --> 
+    <div class="w-14 h-14 rounded-full bg-primary flex items-center justify-center shadow-lg shadow-primary/80 hover:scale-110 hover:shadow-primary/60 transition-all duration-300"> 
+      <i class="fa-solid fa-phone text-white text-2xl"></i>
+    </div>
+
+  </div>
+</a>
+</body>
+</html>

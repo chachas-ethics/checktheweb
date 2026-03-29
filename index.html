@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Synlotech Loader</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="icon" class="rounded-full" href="thumbnails/theS.png" type="image/x-icon">
+
+   <!-- TAILWIND CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- CUSTOM CONFIG -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#2563EB', 
+            accent: '#38BDF8',
+            dark: '#020617',
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    /* Optional: smoother typing cursor */
+    @keyframes blink {
+      0%, 50%, 100% { opacity: 1; }
+      25%, 75% { opacity: 0; }
+    }
+    .cursor {
+      display: inline-block;
+      width: 1ch;
+      animation: blink 1s infinite;
+    }
+  </style>
+</head>
+
+<body class="bg-[#020617] flex items-center justify-center min-h-screen overflow-hidden font-sans">
+
+  <!-- Loader Overlay -->
+  <div id="loader" class="fixed inset-0 flex flex-col items-center justify-center bg-[#020617] z-50">
+    
+    <!-- Ambient Background Glows -->
+    <div class="absolute top-[-10%] left-[-10%] w-96 h-96 bg-primary/20 blur-[120px] rounded-full animate-pulse"></div>
+    <div class="absolute bottom-[-10%] right-[-10%] w-96 h-96 bg-accent/20 blur-[120px] rounded-full animate-pulse"></div>
+
+    <!-- Main Card Container -->
+    <div class="relative z-10 flex flex-col items-center">
+      
+      <!-- Your Image with Premium Border & Glow -->
+      <div class="relative p-1 rounded-3xl bg-gradient-to-br from-primary to-accent shadow-[0_0_50px_-12px_rgba(37,99,235,0.5)]">
+        <div class="overflow-hidden rounded-[22px] bg-[#020617]">
+          <img src="thumbnails/theS.png" class="h-[50vh] w-auto object-cover hover:scale-105 transition-transform duration-700">
+        </div>
+      </div>
+
+      <!-- Floating Tech Badge -->
+      <div class="mt-[-20px] bg-white/5 backdrop-blur-md border border-white/10 px-6 py-2 rounded-full shadow-xl">
+        <p class="text-accent font-mono text-xs tracking-[0.3em] uppercase">Status: Initializing Core</p>
+      </div>
+
+      <!-- Typography Section -->
+      <div class="mt-10 text-center">
+        <h1 class="text-white text-5xl font-bold tracking-tight mb-3">
+          SYNLOTECH<span class="text-primary">.</span>
+        </h1>
+        
+        <!-- Animated Typing Container -->
+        <div class="inline-flex items-center gap-2 text-white/60 font-medium">
+          <span class="w-2 h-2 rounded-full bg-accent animate-ping"></span>
+          <span id="typing-text" class="text-lg"></span>
+          <span class="w-[2px] h-6 bg-primary animate-blink"></span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <style>
+    @keyframes blink { 50% { opacity: 0; } }
+    .animate-blink { animation: blink 1s step-end infinite; }
+  </style>
+  
+
+
+  <script>
+    const text = "Transforming Ideas into Digital Reality";
+    const typingElement = document.getElementById("typing-text");
+    let index = 0;
+
+    function type() {
+      if (index < text.length) {
+        typingElement.textContent += text[index];
+        index++;
+        setTimeout(type, 100); // typing speed
+      } else {
+        // Optional loop typing after pause
+        setTimeout(() => {
+          typingElement.textContent = "";
+          index = 0;
+          type();
+        }, 1500);
+      }
+    }
+
+    type();
+
+    // Hide loader when page is fully loaded
+   window.addEventListener("load", () => {
+  const minTime = 3000; // 3 seconds
+  const elapsed = Date.now() - startTime; // track start time
+  const remaining = Math.max(minTime - elapsed, 0);
+
+  setTimeout(() => {
+    document.getElementById("loader").style.display = "none";
+    document.getElementById("content").classList.remove("hidden");
+  }, remaining);
+});
+
+/* redirect after 4 seconds */
+setTimeout(function(){
+  window.location.href = "homepage.html"; 
+}, 5000);
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-4PMXTMQXM4"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  // Replace with your GA4 Measurement ID
+  gtag('config', 'G-4PMXTMQXM4');
+</script>
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Insights & Articles | Synlotech Technologies</title>
+  <meta name="description" content="Read expert insights on web development, AI, performance optimization, and real-world case studies from Synlotech Technologies." />
+
+  <!-- SEO -->
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://synlotech.dev/blog" />
+
+  <!-- FAVICON -->
+  <link rel="icon" href="thumbnails/theS.png" />
+
+  <!-- FONT AWESOME -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+
+  <!-- TAILWIND -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#2563EB',
+            accent: '#38BDF8',
+            dark: '#020617',
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    .bar {
+  position: absolute;
+  width: 24px;
+  height: 2px;
+  background: white;
+  transition: 0.3s ease;
+}
+
+.top {
+  top: 12px;
+}
+
+.middle {
+  opacity: 1;
+}
+
+.bottom {
+  bottom: 12px;
+}
+
+/* OPEN STATE */
+#menuBtn.open .top {
+  transform: translateY(6px) rotate(45deg);
+}
+
+#menuBtn.open .middle {
+  opacity: 0;
+}
+
+#menuBtn.open .bottom {
+  transform: translateY(-6px) rotate(-45deg);
+}
+
+
+.animate-on-scroll { opacity: 0; transform: translateY(30px); transition: opacity 0.6s ease-out, transform 0.6s ease-out; }
+    .animate-on-scroll.in-view { opacity: 1; transform: translateY(0); }
+
+
+    
+@keyframes whatsappPulse { 0% { box-shadow: 0 0 0 0 rgba(37, 99, 235, 0.6); } 70% { box-shadow: 0 0 0 14px rgba(37, 99, 235, 0); } 100% { box-shadow: 0 0 0 0 rgba(37, 99, 235, 0); } } 
+.whatsapp-pulse { animation: whatsappPulse 2.5s infinite; }
+  </style>
+</head>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Synlotech Technologies",
+  "url": "https://synlotech.com",
+  "logo": "https://synlotech.com/images/logo.png",
+  "description": "Synlotech Technologies specializes in stunning website design, responsive web development, graphics, motion visuals, and 3D animations.",
+  "sameAs": [
+    "https://instagram.com/synlotech",
+    "https://facebook.com/synlotech",
+    "https://linkedin.com/company/synlotech"
+  ],
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "telephone": "+255788296274",
+    "contactType": "customer service",
+    "areaServed": "Worldwide",
+    "availableLanguage": ["English"]
+  }
+}
+</script>
+
+<body class="bg-dark text-slate-200 antialiased  transition-opacity duration-700 ease-out">
+
+  <!-- NAVBAR -->
+   
+<header class="fixed top-6 inset-x-0 z-50 transition-all duration-500">
+  <div class="max-w-5xl mx-auto px-4 relative">
+    <!-- Main Bar -->
+    <div class="backdrop-blur-xl bg-black/40 border border-white/10 rounded-[2rem] px-8 py-2 flex items-center justify-between shadow-2xl relative z-50">
+      
+      <a href="#home" class="group flex items-center gap-3 py-2">
+        <div class="relative">
+          <div class="absolute inset-0 bg-primary/40 blur-md rounded-full group-hover:bg-primary transition-all"></div>
+          <img src="thumbnails/theS.png" class="relative w-8 h-9 object-contain group-hover:scale-110 transition-transform">
+        </div>
+        <span class="text-lg font-black text-white tracking-tighter uppercase">Synlo<span class="text-primary italic">tech</span></span>
+      </a>
+
+      <!-- DESKTOP NAV -->
+      <nav class="hidden md:flex items-center gap-10">
+        <a href="#services" class="text-[10px] font-black uppercase tracking-[0.2em] text-slate-400 hover:text-primary transition-colors">Services</a>
+        <a href="#work" class="text-[10px] font-black uppercase tracking-[0.2em] text-slate-400 hover:text-primary transition-colors">Work</a>
+        <a href="#process" class="text-[10px] font-black uppercase tracking-[0.2em] text-slate-400 hover:text-primary transition-colors">Process</a>
+      </nav>
+
+      <div class="hidden md:block">
+        <a href="#contact-form" class="px-6 py-3 rounded-xl bg-white text-black text-[10px] font-black uppercase tracking-widest hover:bg-primary transition-all active:scale-95">
+          Initiate Quote
+        </a>
+      </div>
+
+      <!-- MOBILE TOGGLE -->
+      <button id="menuBtn" class="md:hidden w-10 h-10 flex flex-col justify-center items-center gap-1.5 focus:outline-none">
+        <span class="bar-1 w-6 h-0.5 bg-white rounded-full transition-all duration-300"></span>
+        <span class="bar-2 w-4 h-0.5 bg-primary self-end rounded-full transition-all duration-300"></span>
+      </button>
+    </div>
+
+    <!-- MOBILE MENU (The part you were missing) -->
+    <div id="mobileMenu" class="absolute top-0 left-4 right-4 pt-24 pb-8 px-8 bg-black/90 backdrop-blur-2xl border border-white/10 rounded-[2.5rem] transform -translate-y-full opacity-0 pointer-events-none transition-all duration-500 ease-in-out z-40">
+      <nav class="flex flex-col gap-6 text-center">
+        <a href="#services" class="text-xs font-black uppercase tracking-[0.3em] text-white hover:text-primary transition-colors">Services</a>
+        <a href="#work" class="text-xs font-black uppercase tracking-[0.3em] text-white hover:text-primary transition-colors">Work</a>
+        <a href="#process" class="text-xs font-black uppercase tracking-[0.3em] text-white hover:text-primary transition-colors">Process</a>
+        <div class="h-px bg-white/10 my-2"></div>
+        <a href="#contact-form" class="py-4 rounded-2xl bg-primary text-black text-xs font-black uppercase tracking-widest">Initiate Quote</a>
+      </nav>
+    </div>
+  </div>
+</header>
+
+  <article class="bg-[#080808] text-white selection:bg-primary/30 py-20 overflow-hidden">
+  
+  <!-- HERO: THE TYPOGRAPHY OVERLAY -->
+  <header class="relative max-w-7xl mx-auto px-6 mb-32">
+    <!-- Huge Watermark -->
+    <div class="absolute -top-20 -left-10 text-[12rem] md:text-[15rem] font-black text-white/[0.02] leading-none select-none pointer-events-none">JOURNAL</div>
+    
+    <div class="relative z-10 grid lg:grid-cols-12 gap-12 items-end">
+      <div class="lg:col-span-8 space-y-8">
+        <div class="flex items-center mt-20 gap-4">
+          <span class="h-px w-12 bg-primary"></span>
+          <span class="text-xs font-mono uppercase tracking-[0.5em] text-primary">Intelligence Hub</span>
+        </div>
+        <h1 style="font-family: inter;" class="text-6xl md:text-8xl font-black tracking-tighter leading-[0.9]">
+          UNFILTERED <br/> <span class="italic text-transparent bg-clip-text bg-gradient-to-r from-primary to-blue-500">INSIGHTS.</span>
+        </h1>
+      </div>
+      <div class="lg:col-span-4 pb-2">
+        <p class="text-lg text-slate-400 leading-relaxed border-l-2 border-white/10 pl-6">
+          Practical knowledge on <span class="text-white">Web Dev, AI, and Strategy</span>. No fluff, just the blueprint for digital growth.
+        </p>
+      </div>
+    </div>
+  </header>
+
+  <!-- THE MASONRY GRID -->
+  <section class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-12 gap-8">
+    
+    <!-- CARD 1: UI/UX (Large Feature) -->
+    <article class="md:col-span-8 group relative aspect-[16/9] overflow-hidden rounded-[2.5rem] bg-slate-900 border border-white/5 transition-all duration-700 hover:rounded-3xl shadow-2xl">
+      <img src="thumbnails/uiux2.jpg" class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:scale-105 group-hover:opacity-40 transition-all duration-700" alt="UX Design">
+      <div class="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent"></div>
+      
+      <div class="absolute bottom-0 left-0 p-10 space-y-4">
+        <span class="px-3 py-1 rounded-full bg-primary/20 text-primary text-[10px] font-bold uppercase tracking-widest border border-primary/30">Psychology & UI</span>
+        <h3 class="text-4xl font-black max-w-lg leading-tight group-hover:translate-x-2 transition-transform duration-500">UI/UX Principles That <br/> Convert Visitors.</h3>
+        <p class="text-slate-400 max-w-md line-clamp-2">Learn how design psychology and layout choices directly impact conversion rates and user retention.</p>
+        <a href="uiux.html" class="inline-flex items-center gap-2 text-sm font-bold text-white/50 group-hover:text-primary transition-colors">
+          READ ARTICLE <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+        </a>
+      </div>
+    </article>
+
+    <!-- CARD 2: GRAPHIC DESIGN (Vertical Side Card) -->
+    <article class="md:col-span-4 group relative min-h-[400px] rounded-[2.5rem] bg-gradient-to-br from-slate-900 to-black border border-white/5 p-8 flex flex-col justify-between overflow-hidden">
+      <!-- Decorative Glow -->
+      <div class="absolute -right-10 -top-10 w-40 h-40 bg-primary/10 rounded-full blur-3xl group-hover:bg-primary/20 transition-all"></div>
+      
+      <div class="relative z-10">
+        <span class="text-xs font-mono text-slate-500 uppercase tracking-widest italic">Branding Logic</span>
+        <h3 class="text-3xl font-bold mt-4 leading-tight">Designing Visual <br/> Identities That <br/> Stand Out.</h3>
+      </div>
+
+      <div class="relative z-10 mt-auto">
+        <p class="text-slate-400 text-sm mb-6 leading-relaxed">How color theory, typography, and spacing define market winners in a crowded digital space.</p>
+        <div class="h-1 w-full bg-white/5 rounded-full overflow-hidden">
+          <div class="h-full w-0 bg-primary group-hover:w-full transition-all duration-700 ease-out"></div>
+        </div>
+        <a href="graphic.html" class="mt-4 inline-block text-xs font-black uppercase tracking-widest text-white/40 hover:text-white transition-colors">View Deep Dive</a>
+      </div>
+    </article>
+
+    <!-- CARD 3: CYBERSECURITY (Terminal Themed) -->
+    <article class="md:col-span-4 group p-8 rounded-[2.5rem] bg-[#0d1117] border border-white/5 hover:border-red-500/40 transition-all duration-500 flex flex-col justify-between">
+      <div>
+        <div class="flex justify-between items-start mb-8">
+          <div class="font-mono text-[10px] text-red-500/50 uppercase tracking-widest">Protocol: Security_v2.0</div>
+          <div class="w-2 h-2 rounded-full bg-red-500 animate-pulse"></div>
+        </div>
+        <h3 class="text-2xl font-black text-white mb-4">Cybersecurity Basics <br/> Every Business Needs.</h3>
+        <p class="text-slate-500 text-sm leading-relaxed mb-6">Protect your digital assets and user data with modern encryption and infrastructure best practices.</p>
+      </div>
+      
+      <a href="security.html" class="w-14 h-14 rounded-2xl border border-white/10 flex items-center justify-center group-hover:bg-red-500 group-hover:text-black group-hover:rotate-45 transition-all duration-500">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+      </a>
+    </article>
+
+    <!-- CARD 4: AI & TECH (Inverted Horizontal Card) -->
+    <article class="md:col-span-8 group relative overflow-hidden rounded-[2.5rem] bg-white text-black p-8 md:p-12 flex flex-col md:flex-row gap-10 items-center transition-all duration-500 hover:shadow-[0_0_50px_rgba(255,255,255,0.1)]">
+      <div class="md:w-1/2 space-y-6">
+        <span class="text-[10px] font-black uppercase tracking-[0.4em] text-black/40 px-2 py-1 border border-black/10 rounded">Emerging Tech</span>
+        <h3 class="text-4xl font-black leading-none tracking-tighter">AI Trends Every <br/> Developer <br/> Should Know.</h3>
+        <p class="text-slate-600 font-medium">Why LLMs and autonomous agents are redefining the full-stack development lifecycle for 2024.</p>
+        <a href="aitech.html"><button class="px-8 py-4 bg-black mt-10 text-white rounded-full font-black text-xs uppercase tracking-[0.2em] hover:bg-primary transition-all active:scale-95">Read Trends</button></a>
+      </div>
+      <div class="md:w-1/2 relative">
+        <img src="thumbnails/AI.jpg" class="rounded-[1.5rem] grayscale group-hover:grayscale-0 transition-all duration-1000 shadow-2xl scale-110 md:rotate-3 group-hover:rotate-0" alt="AI Technology">
+      </div>
+    </article>
+
+    <!-- CARD 5: TECH STACK (Minimalist Footer Card) -->
+    <article class="md:col-span-12 group relative p-10 rounded-[2.5rem] bg-slate-900 border border-white/5 overflow-hidden flex flex-col md:flex-row justify-between items-center gap-8">
+      <div class="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,rgba(37,99,235,0.1),transparent_50%)]"></div>
+      
+      <div class="relative z-10 max-w-xl">
+        <h3 class="text-3xl font-black text-white mb-2">The Perfect Startup Stack.</h3>
+        <p class="text-slate-400">Scaling from zero to one requires more than just code. Discover our vetted stack for speed, SEO, and developer experience.</p>
+      </div>
+
+      <div class="relative z-10 flex gap-4">
+        <div class="p-4 bg-white/5 rounded-2xl backdrop-blur-md border border-white/10 group-hover:-translate-y-2 transition-transform">
+          <span class="text-xs font-mono text-primary">05</span>
+        </div>
+        <a href="startups.html" class="px-10 py-5 bg-primary text-black rounded-full font-black uppercase tracking-widest hover:scale-105 transition-all">Full Article</a>
+      </div>
+    </article>
+
+  </section>
+
+  <!-- NEWSLETTER: THE "MAGAZINE" CALLOUT -->
+  <footer class="mt-32 max-w-5xl mx-auto px-6">
+    <div class="relative p-12 md:p-20 rounded-[3.5rem] bg-slate-900  overflow-hidden shadow-2xl">
+      <!-- Noise Texture -->
+      <div class="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app')] opacity-20 pointer-events-none"></div>
+      
+      <div class="relative z-10 text-center space-y-8">
+        <h2 style="font-family: inter;" class="text-5xl md:text-6xl font-black text-white tracking-tighter leading-none">Stay ahead of <br/> the curve.</h2>
+        <p class="text-white font-bold max-w-md mx-auto">Get the latest technical insights and design patterns delivered to your inbox weekly.</p>
+        
+        <form class="flex flex-col sm:flex-row gap-3 max-w-lg mx-auto bg-black/5 p-2 rounded-[2rem] border border-black/10">
+          <input type="email" placeholder="Email Address" class="flex-1 px-8 py-4 rounded-full bg-white/10 border-none text-white placeholder:text-white focus:ring-2 focus:ring-black focus:bg-white/30 transition-all text-black font-bold outline-none">
+          <button class="px-10 py-4 bg-black text-white rounded-full font-black uppercase tracking-widest hover:bg-white hover:text-black transition-all">Subscribe</button>
+        </form>
+      </div>
+    </div>
+    
+    <div class="mt-12 flex justify-between items-center px-4">
+      <p class="text-[10px] font-mono text-slate-700 uppercase tracking-[0.5em]">SYNLOTECH // JOURNAL // 2024</p>
+      <div class="flex gap-4">
+        <div class="w-2 h-2 rounded-full bg-slate-800"></div>
+        <div class="w-2 h-2 rounded-full bg-slate-800"></div>
+        <div class="w-2 h-2 rounded-full bg-slate-800"></div>
+      </div>
+    </div>
+  </footer>
+
+</article>
+
+
+<!-- FOOTER -->
+<footer class="relative bg-[#020202] pt-24 pb-12 overflow-hidden border-t border-white/5">
+  <!-- Decorative Grid Overlay -->
+  <div class="absolute inset-0 bg-[radial-gradient(#ffffff03_1px,transparent_1px)] bg-[size:30px_30px] pointer-events-none"></div>
+
+  <div class="relative max-w-7xl mx-auto px-6">
+    
+    <!-- UPPER TIER: BRAND & NEWSLETTER -->
+    <div class="grid lg:grid-cols-12 gap-16 mb-20">
+      
+      <!-- BRAND HUB -->
+      <div class="lg:col-span-4">
+        <a href="homepage.html#home" class="group flex items-center gap-4 mb-8">
+          <div class="relative">
+            <div class="absolute inset-0 bg-primary/20 blur-lg rounded-full group-hover:bg-primary/40 transition-all"></div>
+            <img loading="lazy" src="thumbnails/theS.png" class="relative w-12 h-12 object-contain grayscale group-hover:grayscale-0 transition-all">
+          </div>
+          <span class="text-3xl font-black text-white tracking-tighter uppercase">Synlo<span class="text-primary italic">tech</span></span>
+        </a>
+        <p class="text-slate-500 text-sm leading-relaxed max-w-xs mb-8">
+          Engineering high-frequency digital assets for global innovators. Built for performance, reliability, and growth.
+        </p>
+        <!-- SYSTEM STATUS INDICATOR -->
+        <div class="inline-flex items-center gap-3 px-4 py-2 rounded-xl bg-white/[0.03] border border-white/10">
+          <div class="h-2 w-2 rounded-full bg-green-500 animate-pulse"></div>
+          <span class="text-[10px] font-black text-slate-400 uppercase tracking-widest">All Systems Operational</span>
+        </div>
+      </div>
+
+      <!-- THE FEED (NEWSLETTER) -->
+      <div class="lg:col-span-4">
+        <h3 class="text-xs font-black text-white uppercase tracking-[0.3em] mb-6">Internal Feed</h3>
+        <p class="text-slate-500 text-xs mb-6">Join the technical dispatch for weekly performance insights.</p>
+        <form action="https://formspree.io/f/mwvnvdko" method="POST" class="relative group">
+          <input type="email" name="email" placeholder="Terminal@address.com" required
+                 class="w-full px-5 py-4 rounded-2xl bg-white/[0.03] border border-white/10 text-white text-sm focus:outline-none focus:border-primary transition-all">
+          <button type="submit" class="absolute right-2 top-2 bottom-2 px-6 rounded-xl bg-primary text-black text-[10px] font-black uppercase tracking-widest hover:bg-white transition-all">
+            Join
+          </button>
+        </form>
+      </div>
+
+      <!-- SOCIAL COMM LINKS -->
+      <div class="lg:col-span-4 flex flex-col lg:items-end">
+        <h3 class="text-xs font-black text-white uppercase tracking-[0.3em] mb-6">Active Channels</h3>
+        <div class="flex gap-4">
+          <a href="https://linkedin.com..." class="w-12 h-12 rounded-2xl bg-white/[0.03] border border-white/10 flex items-center justify-center text-slate-400 hover:text-primary hover:border-primary/50 transition-all group">
+            <i class="fa-brands fa-linkedin-in text-lg group-hover:scale-110 transition-transform"></i>
+          </a>
+          <a href="https://instagram.com..." class="w-12 h-12 rounded-2xl bg-white/[0.03] border border-white/10 flex items-center justify-center text-slate-400 hover:text-primary hover:border-primary/50 transition-all group">
+            <i class="fa-brands fa-instagram text-lg group-hover:scale-110 transition-transform"></i>
+          </a>
+          <a href="https://x.com..." class="w-12 h-12 rounded-2xl bg-white/[0.03] border border-white/10 flex items-center justify-center text-slate-400 hover:text-primary hover:border-primary/50 transition-all group">
+            <i class="fa-brands fa-x-twitter text-lg group-hover:scale-110 transition-transform"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- MIDDLE TIER: NAVIGATION MATRIX -->
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-12 py-16 border-y border-white/5">
+      <div>
+        <h4 class="text-[10px] font-black text-slate-600 uppercase tracking-[0.4em] mb-6">Navigation</h4>
+        <ul class="space-y-4">
+          <li><a href="#services" class="text-sm text-slate-400 hover:text-primary transition-colors">Core Services</a></li>
+          <li><a href="#work" class="text-sm text-slate-400 hover:text-primary transition-colors">Case Archive</a></li>
+          <li><a href="#process" class="text-sm text-slate-400 hover:text-primary transition-colors">Logic Flow</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="text-[10px] font-black text-slate-600 uppercase tracking-[0.4em] mb-6">Support</h4>
+        <ul class="space-y-4">
+          <li><a href="mailto:synlotech@outlook.com" class="text-sm text-slate-400 hover:text-primary transition-colors">Direct Uplink</a></li>
+          <li><a href="https://wa.me..." class="text-sm text-slate-400 hover:text-primary transition-colors">WhatsApp Sync</a></li>
+          <li><a href="#maintenance" class="text-sm text-slate-400 hover:text-primary transition-colors">SLA Plans</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="text-[10px] font-black text-slate-600 uppercase tracking-[0.4em] mb-6">Legal</h4>
+        <ul class="space-y-4">
+          <li><a href="Privacy-Policy.html" class="text-sm text-slate-400 hover:text-primary transition-colors">Privacy Protocol</a></li>
+          <li><a href="Terms-Of-Service.html" class="text-sm text-slate-400 hover:text-primary transition-colors">Service Terms</a></li>
+        </ul>
+      </div>
+      <div class="flex flex-col items-start md:items-end">
+        <h4 class="text-[10px] font-black text-slate-600 uppercase tracking-[0.4em] mb-6">Global Ops</h4>
+        <p class="text-xs text-slate-500 font-mono text-left md:text-right">DAR ES SALAAM, TZ<br/>GLOBAL REMOTE DEPLOYMENT</p>
+      </div>
+    </div>
+
+    <!-- LOWER TIER: SYSTEM COPYRIGHT -->
+    <div class="pt-12 flex flex-col md:flex-row justify-between items-center gap-6">
+      <p class="text-[10px] font-mono text-slate-700 uppercase tracking-[0.4em]">
+        © 2026 SYNLOTECH // PERFORMANCE ENGINEERING
+      </p>
+      <div class="flex items-center gap-6">
+        <div class="h-[1px] w-12 bg-white/5"></div>
+        <p class="text-[10px] font-mono text-slate-700 uppercase tracking-[0.4em]">Integrated Terminal v2.4.0</p>
+      </div>
+    </div>
+
+  </div>
+</footer>
+
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    // 1. Navbar Logic
+    const menuBtn = document.getElementById('menuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    const bars = menuBtn ? menuBtn.querySelectorAll('span') : [];
+
+    if (menuBtn && mobileMenu) {
+        menuBtn.addEventListener('click', () => {
+            const isClosed = mobileMenu.classList.contains('-translate-y-full');
+            if (isClosed) {
+                // Open Menu
+                mobileMenu.classList.remove('-translate-y-full', 'opacity-0', 'pointer-events-none');
+                mobileMenu.classList.add('translate-y-0', 'opacity-100', 'pointer-events-auto');
+                // Morph to X
+                bars[0].style.transform = "translateY(4px) rotate(45deg)";
+                bars[1].style.transform = "translateY(-4px) rotate(-45deg)";
+                bars[1].style.width = "1.5rem";
+            } else {
+                // Close Menu
+                mobileMenu.classList.add('-translate-y-full', 'opacity-0', 'pointer-events-none');
+                mobileMenu.classList.remove('translate-y-0', 'opacity-100', 'pointer-events-auto');
+                // Reset Bars
+                bars[0].style.transform = "none";
+                bars[1].style.transform = "none";
+                bars[1].style.width = "1rem";
+            }
+        });
+    }
+
+    // 2. Scroll Animations (Intersection Observer)
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('in-view');
+                observer.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.animate-on-scroll').forEach(section => observer.observe(section));
+
+    // 3. WhatsApp Form Uplink
+    const form = document.getElementById("form");
+    if (form) {
+        form.addEventListener("submit", (e) => {
+            e.preventDefault();
+            const name = form.elements["name"].value;
+            const email = form.elements["email"].value;
+            const message = form.elements["message"].value;
+            const text = `Hello, I have a new project inquiry:\n\nName: ${name}\nEmail: ${email}\nMessage: ${message}`;
+            window.open(`https://wa.me{encodeURIComponent(text)}`, "_blank");
+        });
+    }
+});
+</script>
+
+
+  <a href="https://wa.me/255788296274" target="_blank" aria-label="Chat on WhatsApp" class="fixed bottom-6 right-5 z-50 group"> 
+    <div class="flex items-center gap-3">
+     <!-- Optional Tooltip --> 
+      <span class="hidden md:block opacity-0 group-hover:opacity-100 translate-x-2 group-hover:translate-x-0 transition-all duration-300 bg-dark text-white text-sm px-4 py-2 rounded-lg shadow-lg"> Chat with us </span> 
+      <!-- Button --> <div class="w-14 h-14 rounded-full bg-green-500 flex items-center justify-center shadow-lg shadow-green-500/80 hover:scale-110 hover:shadow-green-500/60 transition-all duration-300"> <i class="fa-brands fa-whatsapp text-white text-2xl"></i> 
+      </div>
+     </div>
+     </a>
+
+     <a href="tel:+255788296274" target="_blank" aria-label="Call us" class="fixed bottom-24 right-5 z-50 group"> 
+  <div class="flex items-center gap-3">
+
+    <!-- Optional Tooltip --> 
+    <span class="hidden md:block opacity-0 group-hover:opacity-100 translate-x-2 group-hover:translate-x-0 transition-all duration-300 bg-dark text-white text-sm px-4 py-2 rounded-lg shadow-lg">
+      Call us
+    </span> 
+
+    <!-- Button --> 
+    <div class="w-14 h-14 rounded-full bg-primary flex items-center justify-center shadow-lg shadow-primary/80 hover:scale-110 hover:shadow-primary/60 transition-all duration-300"> 
+      <i class="fa-solid fa-phone text-white text-2xl"></i>
+    </div>
+
+  </div>
+</a>
+
+  <a href="tel:+255788296274" target="_blank" aria-label="Call us" class="fixed bottom-24 right-5 z-50 group"> 
+  <div class="flex items-center gap-3">
+
+    <!-- Optional Tooltip --> 
+    <span class="hidden md:block opacity-0 group-hover:opacity-100 translate-x-2 group-hover:translate-x-0 transition-all duration-300 bg-dark text-white text-sm px-4 py-2 rounded-lg shadow-lg">
+      Call us
+    </span> 
+
+    <!-- Button --> 
+    <div class="w-14 h-14 rounded-full bg-primary flex items-center justify-center shadow-lg shadow-primary/80 hover:scale-110 hover:shadow-primary/60 transition-all duration-300"> 
+      <i class="fa-solid fa-phone text-white text-2xl"></i>
+    </div>
+
+  </div>
+</a>
+  </body>
+  </html>

@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-4PMXTMQXM4"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-4PMXTMQXM4');
+  </script>
+
+  <link rel="icon" href="thumbnails/theS.png" type="image/x-icon">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Disclaimer | Synlotech Technologies</title>
+
+  <!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#2563EB',
+            accent: '#38BDF8',
+            dark: '#020617',
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    body {
+      background-color: #0b0f19;
+      color: #e5e7eb;
+      font-family: inter, sans-serif;
+    }
+
+    .bar {
+      position: absolute;
+      width: 24px;
+      height: 2px;
+      background: white;
+      transition: 0.3s ease;
+    }
+
+    .top { top: 12px; }
+    .middle { opacity: 1; }
+    .bottom { bottom: 12px; }
+
+    #menuBtn.open .top { transform: translateY(6px) rotate(45deg); }
+    #menuBtn.open .middle { opacity: 0; }
+    #menuBtn.open .bottom { transform: translateY(-6px) rotate(-45deg); }
+
+    .animate-on-scroll {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    }
+
+    .animate-on-scroll.in-view {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    
+@keyframes whatsappPulse { 0% { box-shadow: 0 0 0 0 rgba(37, 99, 235, 0.6); } 70% { box-shadow: 0 0 0 14px rgba(37, 99, 235, 0); } 100% { box-shadow: 0 0 0 0 rgba(37, 99, 235, 0); } } 
+.whatsapp-pulse { animation: whatsappPulse 2.5s infinite; }
+  </style>
+</head>
+
+<body style="font-family: inter;" class="bg-dark ">
+
+  <!-- NAVBAR -->
+  <header class="fixed top-0 inset-x-0 z-50 backdrop-blur bg-dark/90 border-b border-white/5 py-3">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="flex items-center justify-between h-20">
+
+       <!-- LOGO -->
+         <div style="margin-bottom: 30px;">
+        <a href="homepage.html#home"  class="text-2xl font-extrabold text-primary tracking-tight">
+          <img style="width: 40px;
+          height: 45px;
+          display: inline-block;
+          " loading="lazy" src="thumbnails/theS.png">
+        
+         <p  class="text-xl font-extrabold text-white tracking-tight" style="display: inline-block;
+         margin-top: 35px;
+          ">
+          <span style="font-size: 1.2rem;" >SYNLOTECH</span><br>
+          </p>
+          </a>
+         </div>
+
+        <!-- DESKTOP NAV -->
+        <nav class="hidden md:flex items-center gap-8 text-sm font-medium">
+          <a href="homepage.html#services" class="hover:text-primary transition">Services</a>
+          <a href="homepage.html#work" class="hover:text-primary transition">Work</a>
+          <a href="homepage.html#process" class="hover:text-primary transition">Process</a>
+          <a href="homepage.html#contact-form" class="hover:text-primary transition">Contact Us</a>
+        </nav>
+
+        <!-- CTA -->
+        <div class="hidden md:block">
+          <a href="homepage.html#contact-form"
+             class="px-5 py-2.5 rounded-lg bg-primary text-white font-semibold
+                    hover:bg-blue-700 transition shadow-lg shadow-primary/30">
+            Get a Quote
+          </a>
+        </div>
+
+        <!-- MOBILE MENU BUTTON -->
+       <button
+  id="menuBtn"
+  class="md:hidden relative w-10 h-10 flex items-center justify-center
+         z-50 rounded-md hover: transition"
+  aria-label="Open menu"
+>
+  <span class="bar top"></span>
+  <span class="bar middle"></span>
+  <span class="bar bottom"></span>
+</button>
+
+      </div>
+    </div>
+
+    <!-- MOBILE MENU -->
+    <div id="mobileMenu"
+  class="md:hidden absolute top-full left-0 w-full
+         bg-dark backdrop-blur
+         transform scale-y-0 origin-top
+         opacity-0
+         transition-all duration-300 ease-out">
+
+      <nav class="px-6 py-6 flex flex-col gap-4 text-sm font-medium border-t text-center border-white/10">
+        <a href="homepage.html#services" class="hover:text-primary">Services</a>
+        <a href="homepage.html#work" class="hover:text-primary">Work</a>
+        <a href="homepage.html#process" class="hover:text-primary">Process</a>
+        <a href="homepage.html#contact-form" class="hover:text-primary">Contact Us</a>
+
+        <a href="homepage.html#contact-form"
+           class="mt-4 inline-flex justify-center px-6 py-3 rounded-lg bg-primary text-white font-semibold">
+          Get a Quote
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="max-w-4xl mx-auto px-6 pt-36">
+    <h1 class="text-4xl text-center md:text-5xl font-extrabold text-primary mt-4 mb-6 leading-tight">
+      Disclaimer
+    </h1>
+    <p class="text-slate-300 text-lg">
+      Important information regarding the use of Synlotech Technologies’ website, services, and content.
+    </p>
+  </section>
+
+  <!-- CONTENT -->
+  <main class="max-w-4xl mx-auto px-6 mt-16 space-y-10 leading-relaxed">
+
+    <section>
+      <h2 class="text-2xl font-bold text-primary mb-3">1. General Information</h2>
+      <p class="text-slate-300">
+        The information provided on this website is for general informational and promotional purposes only.
+        While Synlotech Technologies makes reasonable efforts to ensure accuracy, we make no warranties
+        regarding completeness, reliability, or suitability.
+      </p>
+    </section>
+
+    <section>
+      <h2 class="text-2xl font-bold text-primary mb-3">2. No Professional Advice</h2>
+      <p class="text-slate-300">
+        Content on this website does not constitute legal, financial, or professional advice. Decisions made
+        based on information from this website are at your own risk. You should consult a qualified professional
+        where appropriate.
+      </p>
+    </section>
+
+    <section>
+      <h2 class="text-2xl font-bold text-primary mb-3">3. Limitation of Liability</h2>
+      <p class="text-slate-300">
+        Synlotech Technologies shall not be held liable for any direct, indirect, incidental, consequential,
+        or special damages arising from the use of, or inability to use, this website or our services.
+      </p>
+    </section>
+
+    <section>
+      <h2 class="text-2xl font-bold text-primary mb-3">4. External Links</h2>
+      <p class="text-slate-300">
+        This website may contain links to third-party websites. We do not control or endorse their content and
+        accept no responsibility for any losses or damages resulting from their use.
+      </p>
+    </section>
+
+    <section>
+      <h2 class="text-2xl font-bold text-primary mb-3">5. Service & Results Disclaimer</h2>
+      <p class="text-slate-300">
+        Any examples, testimonials, or case studies displayed represent past outcomes and do not guarantee
+        future results. Project success depends on multiple external variables beyond our control.
+      </p>
+    </section>
+
+    <section>
+      <h2 class="text-2xl font-bold text-primary mb-3">6. Website Availability</h2>
+      <p class="text-slate-300">
+        We do not guarantee uninterrupted access to this website. Downtime, errors, or technical issues may occur
+        without prior notice.
+      </p>
+    </section>
+
+    <section>
+      <h2 class="text-2xl font-bold text-primary mb-3">7. Intellectual Property</h2>
+      <p class="text-slate-300">
+        All content, branding, visuals, and materials are the intellectual property of Synlotech Technologies unless
+        otherwise stated. Unauthorized use, reproduction, or distribution is prohibited.
+      </p>
+    </section>
+
+    <section>
+      <h2 class="text-2xl font-bold text-primary mb-3">8. Changes to This Disclaimer</h2>
+      <p class="text-slate-300">
+        Synlotech Technologies reserves the right to modify this Disclaimer at any time. Continued use of the website
+        constitutes acceptance of any revisions.
+      </p>
+    </section>
+
+    <section class="bg-white/5 border border-white/10 rounded-3xl p-6">
+      <h3 class="text-xl font-bold text-primary mb-2">Contact</h3>
+      <p class="text-slate-300">
+        For questions regarding this Disclaimer, please contact Synlotech Technologies through the official channels
+        listed on our website.
+      </p>
+    </section>
+
+  </main>
+
+ <footer class="relative bg-dark border-t border-white/10 pt-16 mt-12">
+  <div class="max-w-7xl mx-auto px-6">
+
+    <div class="pb-12">
+      <!-- AUTO-FIT GRID (THE FIX) -->
+      <div class="grid gap-12 grid-cols-[repeat(auto-fit,minmax(220px,1fr))]">
+
+        <!-- CONTACT -->
+        <div>
+          <h3 class="text-white text-xl font-bold mb-4">Contact Us</h3>
+          <p class="text-white text-sm mb-2">
+            Email:
+            <a href="mailto:synlotech@outlook.com" class="text-gray-400 hover:text-primary transition">
+              synlotech@outlook.com
+            </a>
+          </p>
+          <p class="text-white text-sm">
+            WhatsApp:
+            <a href="https://wa.me/255788296274" class="text-gray-400 hover:text-primary transition">
+              Chat Now
+            </a>
+          </p>
+        </div>
+
+        <!-- SOCIAL -->
+        <div>
+  <h3 class="text-white text-xl font-bold mb-4">Follow Us</h3>
+  <div class="flex gap-4">
+    <a href="https://www.linkedin.com/in/synlotech-technologies-7252933b2" target="_blank" class="text-gray-400 hover:text-primary transition">
+      <i class="fa-brands fa-linkedin-in"></i>
+    </a>
+
+    <a href="https://www.instagram.com/synlo_tech" target="_blank" class="text-gray-400 hover:text-primary transition">
+      <i class="fa-brands fa-instagram"></i>
+    </a>
+
+    <a href="https://x.com/synlotech" target="_blank" class="text-gray-400 hover:text-primary transition">
+      <i class="fa-brands fa-x-twitter"></i>
+    </a>
+  </div>
+</div>
+
+        <!-- POLICIES -->
+        <div>
+          <h3 class="text-white text-xl font-bold mb-4">Policies</h3>
+          <p class="text-slate-300 text-sm">
+            <a href="Privacy-Policy.html" class="text-gray-400 hover:text-primary transition">Privacy Policy</a>
+            <span class="mx-2">|</span>
+            <a href="Terms-Of-Service.html" class="text-gray-400 hover:text-primary transition">Terms of Service</a>
+            <span class="mx-2">|</span>
+            <a href="disclaimer.html" class="text-gray-400 hover:text-primary transition">Disclaimer</a>
+          </p>
+        </div>
+
+        <!-- QUICK LINKS -->
+        <div>
+          <h4 class="text-white font-bold mb-4">Quick Links</h4>
+          <ul class="space-y-2">
+            <li><a href="homepage.html#services" class="text-gray-400 hover:text-primary transition">Services</a></li>
+            <li><a href="homepage.html#work" class="text-gray-400 hover:text-primary transition">Work</a></li>
+            <li><a href="homepage.html#process" class="text-gray-400 hover:text-primary transition">Process</a></li>
+            <li><a href="homepage.html#contact-form" class="text-gray-400 hover:text-primary transition">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <!-- NEWSLETTER -->
+
+         <div>
+  <h3 class="mb-5">Subscribe to Our Newsletter</h3>
+
+  <form 
+    action="https://formspree.io/f/mwvnvdko" 
+    method="POST"
+    class="flex flex-col gap-2"
+  >
+    <input 
+      type="email" 
+      name="email"
+      placeholder="Your email"
+      required
+      class="w-full px-3 py-4 rounded-lg mb-4 bg-white/5 border border-white/10 text-white text-sm focus:outline-none focus:border-primary"
+    />
+
+    <button 
+      type="submit"
+      class="w-full px-4 py-2 rounded-lg bg-primary text-white text-sm font-semibold hover:opacity-90 transition"
+    >
+      Subscribe
+    </button>
+  </form>
+</div>
+
+
+        <!-- BRANDING -->
+        <div>
+          <a href="homepage.html#home" class="flex items-center gap-3">
+            <img loading="lazy" src="thumbnails/theS.png" class="w-10 h-11 object-contain">
+            <p class="text-xl font-extrabold text-white leading-tight">
+              SYNLOTECH <br> TECHNOLOGIES
+            </p>
+          </a>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- BOTTOM -->
+    <div class="border-t border-white/10 py-6 text-center">
+      <p class="text-slate-400 text-sm">
+        © 2026 SYNLOTECH TECHNOLOGIES. All rights reserved.
+      </p>
+    </div>
+
+  </div>
+</footer>
+
+  <script>
+    const btn = document.getElementById('menuBtn');
+    const menu = document.getElementById('mobileMenu');
+
+    btn.addEventListener('click', () => {
+      btn.classList.toggle('open');
+      menu.classList.toggle('scale-y-0');
+      menu.classList.toggle('opacity-0');
+    });
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if(entry.isIntersecting) {
+          entry.target.classList.add('in-view');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, {threshold: 0.1});
+
+    document.querySelectorAll('.animate-on-scroll').forEach(el => observer.observe(el));
+  </script>
+
+
+  <a href="https://wa.me/255788296274" target="_blank" aria-label="Chat on WhatsApp" class="fixed bottom-6 right-5 z-50 group"> 
+    <div class="flex items-center gap-3">
+     <!-- Optional Tooltip --> 
+      <span class="hidden md:block opacity-0 group-hover:opacity-100 translate-x-2 group-hover:translate-x-0 transition-all duration-300 bg-dark text-white text-sm px-4 py-2 rounded-lg shadow-lg"> Chat with us </span> 
+      <!-- Button --> <div class="w-14 h-14 rounded-full bg-green-500 flex items-center justify-center shadow-lg shadow-green-500/80 hover:scale-110 hover:shadow-green-500/60 transition-all duration-300"> <i class="fa-brands fa-whatsapp text-white text-2xl"></i> 
+      </div>
+     </div>
+     </a>
+
+     <a href="tel:+255788296274" target="_blank" aria-label="Call us" class="fixed bottom-24 right-5 z-50 group"> 
+  <div class="flex items-center gap-3">
+
+    <!-- Optional Tooltip --> 
+    <span class="hidden md:block opacity-0 group-hover:opacity-100 translate-x-2 group-hover:translate-x-0 transition-all duration-300 bg-dark text-white text-sm px-4 py-2 rounded-lg shadow-lg">
+      Call us
+    </span> 
+
+    <!-- Button --> 
+    <div class="w-14 h-14 rounded-full bg-primary flex items-center justify-center shadow-lg shadow-primary/80 hover:scale-110 hover:shadow-primary/60 transition-all duration-300"> 
+      <i class="fa-solid fa-phone text-white text-2xl"></i>
+    </div>
+
+  </div>
+</a>
+
+  <a href="tel:+255788296274" target="_blank" aria-label="Call us" class="fixed bottom-24 right-5 z-50 group"> 
+  <div class="flex items-center gap-3">
+
+    <!-- Optional Tooltip --> 
+    <span class="hidden md:block opacity-0 group-hover:opacity-100 translate-x-2 group-hover:translate-x-0 transition-all duration-300 bg-dark text-white text-sm px-4 py-2 rounded-lg shadow-lg">
+      Call us
+    </span> 
+
+    <!-- Button --> 
+    <div class="w-14 h-14 rounded-full bg-primary flex items-center justify-center shadow-lg shadow-primary/80 hover:scale-110 hover:shadow-primary/60 transition-all duration-300"> 
+      <i class="fa-solid fa-phone text-white text-2xl"></i>
+    </div>
+
+  </div>
+</a>
+</body>
+</html>
