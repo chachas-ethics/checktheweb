@@ -1,0 +1,2433 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <title>THE SCOOP. ICECREAM & DESSERTS</title>
+   <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Optional font -->
+  <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet">
+
+
+</head>
+<body style="font-family: abril-fatface" class="relative font-abril">
+<!-- FULLSCREEN MENU -->
+<aside id="fullMenu" class="fixed inset-0 z-[90] bg-black/95 backdrop-blur-xl flex items-center justify-center translate-y-full transition-transform duration-500 ease-in-out">
+  <nav class="flex flex-col items-center gap-10 text-white text-4xl font-bold uppercase tracking-widest text-center font-[Abril_Fatface]">
+    <a href="#menu" class="menu-link">Menu</a>
+    <a href="#reservations" class="menu-link">Reservations</a>
+    <a href="#location" class="menu-link">Location</a>
+    <a href="#reviews" class="menu-link">Reviews</a>
+  </nav>
+</aside>
+
+<!-- HEADER -->
+<header class="fixed top-0 left-0 w-full z-[100] bg-white border-b border-gray-100 shadow-sm">
+  <div class="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
+    <!-- LEFT -->
+    <div class="flex-1">
+      <a href="index.html" class="inline-block transition-transform hover:scale-110">
+        <img src="thumbnails/left.png" class="h-10 w-10 border border-black rounded-full p-2" alt="Home">
+      </a>
+    </div>
+    <!-- CENTER -->
+    <div class="flex justify-center">
+      <img src="images/tsmiddle.PNG" class="h-10 sm:h-12 w-auto" alt="Logo">
+    </div>
+    <!-- RIGHT -->
+    <div class="flex-1 flex justify-end">
+      <button id="navToggle" class="h-8 w-8 flex flex-col justify-between items-center focus:outline-none">
+        <span id="topBar" class="block h-1 w-full bg-black rounded-full transition-all duration-300 mb-1.5"></span>
+        <span id="midBar" class="block h-1 w-full bg-black rounded-full transition-all duration-300 mb-1.5"></span>
+        <span id="botBar" class="block h-1 w-full bg-black rounded-full transition-all duration-300 mb-1.5"></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+
+  <div class="fixed inset-0 -z-10 bg-black/70 backdrop-blur-sm"></div>
+
+
+  <section id="menu" class="font-abril bg-[#b93d22] mt-5">
+<!-- STICKY CATEGORY NAV & SWIPE INDICATOR -->
+<div class="fixed top-[70px] inset-x-0 z-50 bg-[#63c89a] opacity-90 border-b border-white/10 shadow-xl">
+    <div class="max-w-7xl mx-auto">
+        
+        <!-- 1. INDICATOR (Now on TOP) -->
+        <div class="flex flex-col items-center pt-4 pb-2">
+            <img style="display: none;" src="thumbnailss/swipe2.png" 
+                 alt="swipe indicator" 
+                 class="h-6 md:h-8 w-auto animate-pulse opacity-80 brightness-0 invert ">
+            
+            <p class="text-[10px] md:text-[11px] text-white uppercase tracking-[0.3em] mt-1 font-semibold font-sans">
+                Swipe to browse categories
+            </p>
+        </div>
+
+        <!-- 2. CATEGORIES (Now BELOW) -->
+        <div class="flex items-center gap-3 overflow-x-auto px-6 pb-6 [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden">
+            <div class="flex gap-3 items-center">
+                <a href="#ifyoulikeithot" class="shrink-0 px-4 py-1 rounded-full hover:bg-black uppercase text-white transition font-[Abril_Fatface] whitespace-nowrap">
+                    IF YOU LIKE IT HOT
+                </a>
+                <a href="#kahawabaridi" class="shrink-0 px-4 py-1 rounded-full hover:bg-black uppercase text-white transition font-[Abril_Fatface] whitespace-nowrap">
+                    KAHAWA BARIDI
+                </a>
+                <a href="#icedtea" class="shrink-0 px-4 py-1 rounded-full hover:bg-black uppercase text-white transition font-[Abril_Fatface] whitespace-nowrap">
+                    ICED TEA
+                </a>
+                <a href="#classicpots" class="shrink-0 px-4 py-1 rounded-full hover:bg-black uppercase text-white transition font-[Abril_Fatface] whitespace-nowrap">
+                    classic pots
+                </a>
+                <a href="#icecreamflavours" class="shrink-0 px-4 py-1 rounded-full hover:bg-black uppercase text-white transition font-[Abril_Fatface] whitespace-nowrap">
+                    ice cream flavours
+                </a>
+                <a href="#chocolateshakes" class="shrink-0 px-4 py-1 rounded-full hover:bg-black uppercase text-white transition font-[Abril_Fatface] whitespace-nowrap">
+                    chocolate shakes
+                </a>
+                <a href="#specialtyshakes" class="shrink-0 px-4 py-1 rounded-full hover:bg-black uppercase text-white transition font-[Abril_Fatface] whitespace-nowrap">
+                    specialty shakes
+                </a>
+                <a href="#thesweetspot" class="shrink-0 px-4 py-1 rounded-full hover:bg-black uppercase text-white transition font-[Abril_Fatface] whitespace-nowrap">
+                    the sweet spot
+                </a>
+                <a href="#bakedbliss" class="shrink-0 px-4 py-1 rounded-full hover:bg-black uppercase text-white transition font-[Abril_Fatface] whitespace-nowrap">
+                    baked bliss
+                </a>
+                <a href="#thescoopmerch" class="shrink-0 px-4 py-1 rounded-full hover:bg-black uppercase text-white transition font-[Abril_Fatface] whitespace-nowrap">
+                    the scoop merch
+                </a>
+                <!-- End Spacer -->
+                <div class="shrink-0 w-8"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+  
+   
+</header>
+</section>
+
+<section
+  id="ifyoulikeithot"
+  class="scroll-mt-40 px-3 sm:px-6 lg:px-12 py-16 max-w-7xl mx-auto"
+>
+  <h2 style="padding-top: 10rem;"
+    class="text-center text-white font-[abril_fatface] text-3xl sm:text-4xl lg:text-5xl mb-10"
+  >
+    IF YOU LIKE IT HOT
+  </h2>
+
+  <div
+    class="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6"
+  >
+
+    <!-- CARD 1 -->
+    <div class="bg-white rounded-2xl shadow-md p-3 sm:p-4 flex flex-col">
+      <img
+        src="thumbnails/green tea.jpg"
+        alt="Green Tea"
+        class="rounded-xl object-cover aspect-square"
+        loading="lazy"
+      />
+      <h3 class="mt-3 text-lg sm:text-xl font-semibold text-center"> Green Tea </h3>
+      <p class="text-center text-gray-500 mb-3 text-sm sm:text-base"> 3,000/= </p>
+      <button onclick="addToCart('Green Tea', 3000)" class="mt-auto bg-[#63c89c] hover:bg-[#57b88d] text-white py-2.5 sm:py-3 rounded-full text-sm sm:text-lg font-medium transition">
+        Add Item
+      </button>
+    </div>
+
+    <!-- CARD 2 -->
+    <div class="bg-white rounded-2xl shadow-md p-3 sm:p-4 flex flex-col">
+      <img
+        src="thumbnailss/green tea.jpg"
+        alt="Black Tea"
+        class="rounded-xl object-cover aspect-square"
+        loading="lazy"
+      />
+      <h3 class="mt-3 text-lg sm:text-xl font-semibold text-center"> Black Tea </h3>
+      <p class="text-center text-gray-500 mb-3 text-sm sm:text-base"> 3,000/= </p>
+      <button onclick="addToCart('Black Tea', 3000)" class="mt-auto bg-[#63c89c] hover:bg-[#57b88d] text-white py-2.5 sm:py-3 rounded-full text-sm sm:text-lg font-medium transition">
+        Add Item
+      </button>
+    </div>
+
+    <!-- CARD 3 -->
+    <div class="bg-white rounded-2xl shadow-md p-3 sm:p-4 flex flex-col">
+      <img
+        src="thumbnailss/green tea.jpg"
+        alt="Green Tea"
+        class="rounded-xl object-cover aspect-square"
+        loading="lazy"
+      />
+      <h3 class="mt-3 text-lg sm:text-xl font-semibold text-center"> Lemongrass </h3>
+      <p class="text-center text-gray-500 mb-3 text-sm sm:text-base"> 4,000/= </p>
+      <button onclick="addToCart('Lemongrass', 4000)" class="mt-auto bg-[#63c89c] hover:bg-[#57b88d] text-white py-2.5 sm:py-3 rounded-full text-sm sm:text-lg font-medium transition">
+        Add Item
+      </button>
+    </div>
+
+    <!-- CARD 4 -->
+    <div class="bg-white rounded-2xl shadow-md p-3 sm:p-4 flex flex-col">
+      <img
+        src="thumbnailss/green tea.jpg"
+        alt="Green Tea"
+        class="rounded-xl object-cover aspect-square"
+        loading="lazy"
+      />
+      <h3 class="mt-3 text-lg sm:text-xl font-semibold text-center"> Ginger </h3>
+      <p class="text-center text-gray-500 mb-3 text-sm sm:text-base"> 4,000/= </p>
+      <button onclick="addToCart('Ginger', 4000)" class="mt-auto bg-[#63c89c] hover:bg-[#57b88d] text-white py-2.5 sm:py-3 rounded-full text-sm sm:text-lg font-medium transition">
+        Add Item
+      </button>
+    </div>
+
+    <!-- CARD 5 -->
+    <div class="bg-white rounded-2xl shadow-md p-3 sm:p-4 flex flex-col">
+      <img
+        src="thumbnailss/green tea.jpg"
+        alt="Green Tea"
+        class="rounded-xl object-cover aspect-square"
+        loading="lazy"
+      />
+      <h3 class="mt-3 text-lg sm:text-xl font-semibold text-center"> Americano </h3>
+      <p class="text-center text-gray-500 mb-3 text-sm sm:text-base"> 4,000/= </p>
+      <button onclick="addToCart('Americano', 4000)" class="mt-auto bg-[#63c89c] hover:bg-[#57b88d] text-white py-2.5 sm:py-3 rounded-full text-sm sm:text-lg font-medium transition">
+        Add Item
+      </button>
+    </div>
+
+    <!-- CARD 6 -->
+    <div class="bg-white rounded-2xl shadow-md p-3 sm:p-4 flex flex-col">
+      <img
+        src="thumbnailss/green tea.jpg"
+        alt="Green Tea"
+        class="rounded-xl object-cover aspect-square"
+        loading="lazy"
+      />
+      <h3 class="mt-3 text-lg sm:text-xl font-semibold text-center"> Cappuccino </h3>
+      <p class="text-center text-gray-500 mb-3 text-sm sm:text-base"> 6,000/= </p>
+      <button onclick="addToCart('Cappuccino', 6000)" class="mt-auto bg-[#63c89c] hover:bg-[#57b88d] text-white py-2.5 sm:py-3 rounded-full text-sm sm:text-lg font-medium transition">
+        Add Item
+      </button>
+    </div>
+
+    <!-- CARD 7 -->
+    <div class="bg-white rounded-2xl shadow-md p-3 sm:p-4 flex flex-col">
+      <img
+        src="thumbnailss/green tea.jpg"
+        alt="Green Tea"
+        class="rounded-xl object-cover aspect-square"
+        loading="lazy"
+      />
+      <h3 class="mt-3 text-lg sm:text-xl font-semibold text-center"> Flat White </h3>
+      <p class="text-center text-gray-500 mb-3 text-sm sm:text-base"> 5,000/= </p>
+      <button onclick="addToCart('Flat White', 5000)" class="mt-auto bg-[#63c89c] hover:bg-[#57b88d] text-white py-2.5 sm:py-3 rounded-full text-sm sm:text-lg font-medium transition">
+        Add Item
+      </button>
+    </div>
+
+    <!-- CARD 8 -->
+    <div class="bg-white rounded-2xl shadow-md p-3 sm:p-4 flex flex-col">
+      <img
+        src="thumbnailss/green tea.jpg"
+        alt="Green Tea"
+        class="rounded-xl object-cover aspect-square"
+        loading="lazy"
+      />
+      <h3 class="mt-3 text-lg sm:text-xl font-semibold text-center"> Cafe Latte </h3>
+      <p class="text-center text-gray-500 mb-3 text-sm sm:text-base"> 6,000/= </p>
+      <button onclick="addToCart('Cafe Latte', 6000)" class="mt-auto bg-[#63c89c] hover:bg-[#57b88d] text-white py-2.5 sm:py-3 rounded-full text-sm sm:text-lg font-medium transition">
+        Add Item
+      </button>
+    </div>
+
+    
+    <!-- CARD 8 -->
+    <div class="bg-white rounded-2xl shadow-md p-3 sm:p-4 flex flex-col">
+      <img
+        src="thumbnailss/green tea.jpg"
+        alt="Green Tea"
+        class="rounded-xl object-cover aspect-square"
+        loading="lazy"
+      />
+      <h3 class="mt-3 text-lg sm:text-xl font-semibold text-center"> Mocha </h3>
+      <p class="text-center text-gray-500 mb-3 text-sm sm:text-base"> 6,000/= </p>
+      <button onclick="addToCart('Mocha', 6000)" class="mt-auto bg-[#63c89c] hover:bg-[#57b88d] text-white py-2.5 sm:py-3 rounded-full text-sm sm:text-lg font-medium transition">
+        Add Item
+      </button>
+    </div>
+
+    
+    <!-- CARD 8 -->
+    <div class="bg-white rounded-2xl shadow-md p-3 sm:p-4 flex flex-col">
+      <img
+        src="thumbnailss/green tea.jpg"
+        alt="Green Tea"
+        class="rounded-xl object-cover aspect-square"
+        loading="lazy"
+      />
+      <h3 class="mt-3 text-lg sm:text-xl font-semibold text-center"> Single Espresso </h3>
+      <p class="text-center text-gray-500 mb-3 text-sm sm:text-base"> 4,000/= </p>
+      <button onclick="addToCart('Single Espresso', 4000)" class="mt-auto bg-[#63c89c] hover:bg-[#57b88d] text-white py-2.5 sm:py-3 rounded-full text-sm sm:text-lg font-medium transition">
+        Add Item
+      </button>
+    </div>
+
+    
+    <!-- CARD 8 -->
+    <div class="bg-white rounded-2xl shadow-md p-3 sm:p-4 flex flex-col">
+      <img
+        src="thumbnailss/green tea.jpg"
+        alt="Green Tea"
+        class="rounded-xl object-cover aspect-square"
+        loading="lazy"
+      />
+      <h3 class="mt-3 text-lg sm:text-xl font-semibold text-center"> Double Espresso </h3>
+      <p class="text-center text-gray-500 mb-3 text-sm sm:text-base"> 6,000/= </p>
+      <button onclick="addToCart('Double Espresso', 6000)" class="mt-auto bg-[#63c89c] hover:bg-[#57b88d] text-white py-2.5 sm:py-3 rounded-full text-sm sm:text-lg font-medium transition">
+        Add Item
+      </button>
+    </div>
+
+    
+    <!-- CARD 8 -->
+    <div class="bg-white rounded-2xl shadow-md p-3 sm:p-4 flex flex-col">
+      <img
+        src="thumbnailss/green tea.jpg"
+        alt="Green Tea"
+        class="rounded-xl object-cover aspect-square"
+        loading="lazy"
+      />
+      <h3 class="mt-3 text-lg sm:text-xl font-semibold text-center"> Hot Chocolate </h3>
+      <p class="text-center text-gray-500 mb-3 text-sm sm:text-base"> 6,000/= </p>
+      <button onclick="addToCart('Hot Chocolate', 6000)" class="mt-auto bg-[#63c89c] hover:bg-[#57b88d] text-white py-2.5 sm:py-3 rounded-full text-sm sm:text-lg font-medium transition">
+        Add Item
+      </button>
+    </div>
+
+    <!-- CARD 8 -->
+<div class="bg-white rounded-2xl shadow-md p-3 sm:p-4 flex flex-col">
+  <img src="thumbnailss/green tea.jpg" alt="Milk Tea" class="rounded-xl object-cover aspect-square" loading="lazy" />
+  <h3 class="mt-3 text-lg sm:text-xl font-semibold text-center">Milk Tea</h3>
+  <p class="text-center text-gray-500 mb-3 text-sm sm:text-base">4,000/=</p>
+  
+  <!-- Trigger openModal with the ID of the specific modal -->
+  <button onclick="openModal('milkTeaModal')" class="mt-auto bg-[#63c89c] hover:bg-[#57b88d] text-white py-2.5 sm:py-3 rounded-full text-sm sm:text-lg font-medium transition">
+    View Varieties
+  </button>
+</div>
+
+
+
+
+  </div>
+</section>
+
+
+<section
+  id="kahawabaridi"
+  class="scroll-mt-40 px-3 sm:px-6 lg:px-12 py-16 max-w-7xl mx-auto"
+>
+  <h2 
+    class="text-center text-white font-[abril_fatface] text-3xl sm:text-4xl lg:text-5xl mb-10"
+  >
+  KAHAWA BARIDI
+  </h2>
+
+  <div
+    class="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6"
+  >
+
+    <!-- CARD 1 -->
+    <div class="bg-white rounded-2xl shadow-md p-3 sm:p-4 flex flex-col">
+      <img
+        src="thumbnails/green tea.jpg"
+        alt="Green Tea"
+        class="rounded-xl object-cover aspect-square"
+        loading="lazy"
+      />
+      <h3 class="mt-3 text-lg sm:text-xl font-semibold text-center"> Green Tea </h3>
+      <p class="text-center text-gray-500 mb-3 text-sm sm:text-base"> 3,000/= </p>
+      <button onclick="addToCart('Green Tea', 3000)" class="mt-auto bg-[#63c89c] hover:bg-[#57b88d] text-white py-2.5 sm:py-3 rounded-full text-sm sm:text-lg font-medium transition">
+        Add Item
+      </button>
+    </div>
+
+
+    <!-- CARD 7 -->
+    <div class="bg-white rounded-2xl shadow-md p-3 sm:p-4 flex flex-col">
+      <img
+        src="thumbnailss/green tea.jpg"
+        alt="Green Tea"
+        class="rounded-xl object-cover aspect-square"
+        loading="lazy"
+      />
+      <h3 class="mt-3 text-lg sm:text-xl font-semibold text-center"> Green Tea </h3>
+      <p class="text-center text-gray-500 mb-3 text-sm sm:text-base"> 3,000/= </p>
+      <button onclick="addToCart('Green Tea', 3000)" class="mt-auto bg-[#63c89c] hover:bg-[#57b88d] text-white py-2.5 sm:py-3 rounded-full text-sm sm:text-lg font-medium transition">
+        Add Item
+      </button>
+    </div>
+
+    <!-- CARD 8 -->
+    <div class="bg-white rounded-2xl shadow-md p-3 sm:p-4 flex flex-col">
+      <img
+        src="thumbnailss/green tea.jpg"
+        alt="Green Tea"
+        class="rounded-xl object-cover aspect-square"
+        loading="lazy"
+      />
+      <h3 class="mt-3 text-lg sm:text-xl font-semibold text-center"> Green Tea </h3>
+      <p class="text-center text-gray-500 mb-3 text-sm sm:text-base"> 3,000/= </p>
+      <button onclick="addToCart('Green Tea', 3000)" class="mt-auto bg-[#63c89c] hover:bg-[#57b88d] text-white py-2.5 sm:py-3 rounded-full text-sm sm:text-lg font-medium transition">
+        Add Item
+      </button>
+    </div>
+
+    
+
+    
+    <!-- CARD 8 -->
+    <div class="bg-white rounded-2xl shadow-md p-3 sm:p-4 flex flex-col">
+      <img
+        src="thumbnailss/green tea.jpg"
+        alt="Green Tea"
+        class="rounded-xl object-cover aspect-square"
+        loading="lazy"
+      />
+      <h3 class="mt-3 text-lg sm:text-xl font-semibold text-center"> Green Tea </h3>
+      <p class="text-center text-gray-500 mb-3 text-sm sm:text-base"> 3,000/= </p>
+      <button onclick="addToCart('Green Tea', 3000)" class="mt-auto bg-[#63c89c] hover:bg-[#57b88d] text-white py-2.5 sm:py-3 rounded-full text-sm sm:text-lg font-medium transition">
+        Add Item
+      </button>
+    </div>
+
+    
+    <!-- CARD 8 -->
+    <div class="bg-white rounded-2xl shadow-md p-3 sm:p-4 flex flex-col">
+      <img
+        src="thumbnailss/green tea.jpg"
+        alt="Green Tea"
+        class="rounded-xl object-cover aspect-square"
+        loading="lazy"
+      />
+      <h3 class="mt-3 text-lg sm:text-xl font-semibold text-center"> Green Tea </h3>
+      <p class="text-center text-gray-500 mb-3 text-sm sm:text-base"> 3,000/= </p>
+      <button onclick="addToCart('Green Tea', 3000)" class="mt-auto bg-[#63c89c] hover:bg-[#57b88d] text-white py-2.5 sm:py-3 rounded-full text-sm sm:text-lg font-medium transition">
+        Add Item
+      </button>
+    </div>
+
+    
+    <!-- CARD 8 -->
+    <div class="bg-white rounded-2xl shadow-md p-3 sm:p-4 flex flex-col">
+      <img
+        src="thumbnailss/green tea.jpg"
+        alt="Green Tea"
+        class="rounded-xl object-cover aspect-square"
+        loading="lazy"
+      />
+      <h3 class="mt-3 text-lg sm:text-xl font-semibold text-center"> Green Tea </h3>
+      <p class="text-center text-gray-500 mb-3 text-sm sm:text-base"> 3,000/= </p>
+      <button onclick="addToCart('Green Tea', 3000)" class="mt-auto bg-[#63c89c] hover:bg-[#57b88d] text-white py-2.5 sm:py-3 rounded-full text-sm sm:text-lg font-medium transition">
+        Add Item
+      </button>
+    </div>
+
+
+  </div>
+</section>
+
+
+<section
+  id="icedtea"
+  class="scroll-mt-40 px-3 sm:px-6 lg:px-12 py-16 max-w-7xl mx-auto"
+>
+  <h2 
+    class="text-center text-white font-[abril_fatface] text-3xl sm:text-4xl lg:text-5xl mb-10"
+  >
+    ICED TEA
+  </h2>
+
+  <div
+    class="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6"
+  >
+
+    <!-- CARD 1 -->
+    <div class="bg-white rounded-2xl shadow-md p-3 sm:p-4 flex flex-col">
+      <img
+        src="thumbnails/green tea.jpg"
+        alt="Green Tea"
+        class="rounded-xl object-cover aspect-square"
+        loading="lazy"
+      />
+      <h3 class="mt-3 text-lg sm:text-xl font-semibold text-center"> Green Tea </h3>
+      <p class="text-center text-gray-500 mb-3 text-sm sm:text-base"> 3,000/= </p>
+      <button onclick="addToCart('Green Tea', 3000)" class="mt-auto bg-[#63c89c] hover:bg-[#57b88d] text-white py-2.5 sm:py-3 rounded-full text-sm sm:text-lg font-medium transition">
+        Add Item
+      </button>
+    </div>
+
+    <!-- CARD 5 -->
+    <div class="bg-white rounded-2xl shadow-md p-3 sm:p-4 flex flex-col">
+      <img
+        src="thumbnailss/green tea.jpg"
+        alt="Green Tea"
+        class="rounded-xl object-cover aspect-square"
+        loading="lazy"
+      />
+      <h3 class="mt-3 text-lg sm:text-xl font-semibold text-center"> Green Tea </h3>
+      <p class="text-center text-gray-500 mb-3 text-sm sm:text-base"> 3,000/= </p>
+      <button onclick="addToCart('Green Tea', 3000)" class="mt-auto bg-[#63c89c] hover:bg-[#57b88d] text-white py-2.5 sm:py-3 rounded-full text-sm sm:text-lg font-medium transition">
+        Add Item
+      </button>
+    </div>
+
+    <!-- CARD 6 -->
+    <div class="bg-white rounded-2xl shadow-md p-3 sm:p-4 flex flex-col">
+      <img
+        src="thumbnailss/green tea.jpg"
+        alt="Green Tea"
+        class="rounded-xl object-cover aspect-square"
+        loading="lazy"
+      />
+      <h3 class="mt-3 text-lg sm:text-xl font-semibold text-center"> Green Tea </h3>
+      <p class="text-center text-gray-500 mb-3 text-sm sm:text-base"> 3,000/= </p>
+      <button onclick="addToCart('Green Tea', 3000)" class="mt-auto bg-[#63c89c] hover:bg-[#57b88d] text-white py-2.5 sm:py-3 rounded-full text-sm sm:text-lg font-medium transition">
+        Add Item
+      </button>
+    </div>
+
+    <!-- CARD 7 -->
+    <div class="bg-white rounded-2xl shadow-md p-3 sm:p-4 flex flex-col">
+      <img
+        src="thumbnailss/green tea.jpg"
+        alt="Green Tea"
+        class="rounded-xl object-cover aspect-square"
+        loading="lazy"
+      />
+      <h3 class="mt-3 text-lg sm:text-xl font-semibold text-center"> Green Tea </h3>
+      <p class="text-center text-gray-500 mb-3 text-sm sm:text-base"> 3,000/= </p>
+      <button onclick="addToCart('Green Tea', 3000)" class="mt-auto bg-[#63c89c] hover:bg-[#57b88d] text-white py-2.5 sm:py-3 rounded-full text-sm sm:text-lg font-medium transition">
+        Add Item
+      </button>
+    </div>
+
+    <!-- CARD 8 -->
+    <div class="bg-white rounded-2xl shadow-md p-3 sm:p-4 flex flex-col">
+      <img
+        src="thumbnailss/green tea.jpg"
+        alt="Green Tea"
+        class="rounded-xl object-cover aspect-square"
+        loading="lazy"
+      />
+      <h3 class="mt-3 text-lg sm:text-xl font-semibold text-center"> Green Tea </h3>
+      <p class="text-center text-gray-500 mb-3 text-sm sm:text-base"> 3,000/= </p>
+      <button onclick="addToCart('Green Tea', 3000)" class="mt-auto bg-[#63c89c] hover:bg-[#57b88d] text-white py-2.5 sm:py-3 rounded-full text-sm sm:text-lg font-medium transition">
+        Add Item
+      </button>
+    </div>
+
+    
+    <!-- CARD 8 -->
+    <div class="bg-white rounded-2xl shadow-md p-3 sm:p-4 flex flex-col">
+      <img
+        src="thumbnailss/green tea.jpg"
+        alt="Green Tea"
+        class="rounded-xl object-cover aspect-square"
+        loading="lazy"
+      />
+      <h3 class="mt-3 text-lg sm:text-xl font-semibold text-center"> Green Tea </h3>
+      <p class="text-center text-gray-500 mb-3 text-sm sm:text-base"> 3,000/= </p>
+      <button onclick="addToCart('Green Tea', 3000)" class="mt-auto bg-[#63c89c] hover:bg-[#57b88d] text-white py-2.5 sm:py-3 rounded-full text-sm sm:text-lg font-medium transition">
+        Add Item
+      </button>
+    </div>
+
+    
+    <!-- CARD 8 -->
+    <div class="bg-white rounded-2xl shadow-md p-3 sm:p-4 flex flex-col">
+      <img
+        src="thumbnailss/green tea.jpg"
+        alt="Green Tea"
+        class="rounded-xl object-cover aspect-square"
+        loading="lazy"
+      />
+      <h3 class="mt-3 text-lg sm:text-xl font-semibold text-center"> Green Tea </h3>
+      <p class="text-center text-gray-500 mb-3 text-sm sm:text-base"> 3,000/= </p>
+      <button onclick="addToCart('Green Tea', 3000)" class="mt-auto bg-[#63c89c] hover:bg-[#57b88d] text-white py-2.5 sm:py-3 rounded-full text-sm sm:text-lg font-medium transition">
+        Add Item
+      </button>
+    </div>
+
+    
+    <!-- CARD 8 -->
+    <div class="bg-white rounded-2xl shadow-md p-3 sm:p-4 flex flex-col">
+      <img
+        src="thumbnailss/green tea.jpg"
+        alt="Green Tea"
+        class="rounded-xl object-cover aspect-square"
+        loading="lazy"
+      />
+      <h3 class="mt-3 text-lg sm:text-xl font-semibold text-center"> Green Tea </h3>
+      <p class="text-center text-gray-500 mb-3 text-sm sm:text-base"> 3,000/= </p>
+      <button onclick="addToCart('Green Tea', 3000)" class="mt-auto bg-[#63c89c] hover:bg-[#57b88d] text-white py-2.5 sm:py-3 rounded-full text-sm sm:text-lg font-medium transition">
+        Add Item
+      </button>
+    </div>
+
+    
+    <!-- CARD 8 -->
+    <div class="bg-white rounded-2xl shadow-md p-3 sm:p-4 flex flex-col">
+      <img
+        src="thumbnailss/green tea.jpg"
+        alt="Green Tea"
+        class="rounded-xl object-cover aspect-square"
+        loading="lazy"
+      />
+      <h3 class="mt-3 text-lg sm:text-xl font-semibold text-center"> Green Tea </h3>
+      <p class="text-center text-gray-500 mb-3 text-sm sm:text-base"> 3,000/= </p>
+      <button onclick="addToCart('Green Tea', 3000)" class="mt-auto bg-[#63c89c] hover:bg-[#57b88d] text-white py-2.5 sm:py-3 rounded-full text-sm sm:text-lg font-medium transition">
+        Add Item
+      </button>
+    </div>
+
+    
+    <!-- CARD 8 -->
+    <div class="bg-white rounded-2xl shadow-md p-3 sm:p-4 flex flex-col">
+      <img
+        src="thumbnailss/green tea.jpg"
+        alt="Green Tea"
+        class="rounded-xl object-cover aspect-square"
+        loading="lazy"
+      />
+      <h3 class="mt-3 text-lg sm:text-xl font-semibold text-center"> Green Tea </h3>
+      <p class="text-center text-gray-500 mb-3 text-sm sm:text-base"> 3,000/= </p>
+      <button onclick="addToCart('Green Tea', 3000)" class="mt-auto bg-[#63c89c] hover:bg-[#57b88d] text-white py-2.5 sm:py-3 rounded-full text-sm sm:text-lg font-medium transition">
+        Add Item
+      </button>
+    </div>
+
+
+  </div>
+</section>
+
+
+<section
+  id="classicpots"
+  class="scroll-mt-40 px-3 sm:px-6 lg:px-12 py-16 max-w-7xl mx-auto"
+>
+  <h2 
+    class="text-center text-white font-[abril_fatface] text-3xl sm:text-4xl lg:text-5xl mb-10"
+  >
+    CLASSIC POTS
+  </h2>
+
+  <div
+    class="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6"
+  >
+
+    <!-- CARD 1 -->
+    <div class="bg-white rounded-2xl shadow-md p-3 sm:p-4 flex flex-col">
+      <img
+        src="thumbnails/green tea.jpg"
+        alt="Green Tea"
+        class="rounded-xl object-cover aspect-square"
+        loading="lazy"
+      />
+      <h3 class="mt-3 text-lg sm:text-xl font-semibold text-center"> Green Tea </h3>
+      <p class="text-center text-gray-500 mb-3 text-sm sm:text-base"> 3,000/= </p>
+      <button onclick="addToCart('Green Tea', 3000)" class="mt-auto bg-[#63c89c] hover:bg-[#57b88d] text-white py-2.5 sm:py-3 rounded-full text-sm sm:text-lg font-medium transition">
+        Add Item
+      </button>
+    </div>
+
+    <!-- CARD 2 -->
+    <div class="bg-white rounded-2xl shadow-md p-3 sm:p-4 flex flex-col">
+      <img
+        src="thumbnailss/green tea.jpg"
+        alt="Green Tea"
+        class="rounded-xl object-cover aspect-square"
+        loading="lazy"
+      />
+      <h3 class="mt-3 text-lg sm:text-xl font-semibold text-center"> Green Tea </h3>
+      <p class="text-center text-gray-500 mb-3 text-sm sm:text-base"> 3,000/= </p>
+      <button onclick="addToCart('Green Tea', 3000)" class="mt-auto bg-[#63c89c] hover:bg-[#57b88d] text-white py-2.5 sm:py-3 rounded-full text-sm sm:text-lg font-medium transition">
+        Add Item
+      </button>
+    </div>
+
+    <!-- CARD 3 -->
+    <div class="bg-white rounded-2xl shadow-md p-3 sm:p-4 flex flex-col">
+      <img
+        src="thumbnailss/green tea.jpg"
+        alt="Green Tea"
+        class="rounded-xl object-cover aspect-square"
+        loading="lazy"
+      />
+      <h3 class="mt-3 text-lg sm:text-xl font-semibold text-center"> Green Tea </h3>
+      <p class="text-center text-gray-500 mb-3 text-sm sm:text-base"> 3,000/= </p>
+      <button onclick="addToCart('Green Tea', 3000)" class="mt-auto bg-[#63c89c] hover:bg-[#57b88d] text-white py-2.5 sm:py-3 rounded-full text-sm sm:text-lg font-medium transition">
+        Add Item
+      </button>
+    </div>
+
+    <!-- CARD 4 -->
+    <div class="bg-white rounded-2xl shadow-md p-3 sm:p-4 flex flex-col">
+      <img
+        src="thumbnailss/green tea.jpg"
+        alt="Green Tea"
+        class="rounded-xl object-cover aspect-square"
+        loading="lazy"
+      />
+      <h3 class="mt-3 text-lg sm:text-xl font-semibold text-center"> Green Tea </h3>
+      <p class="text-center text-gray-500 mb-3 text-sm sm:text-base"> 3,000/= </p>
+      <button onclick="addToCart('Green Tea', 3000)" class="mt-auto bg-[#63c89c] hover:bg-[#57b88d] text-white py-2.5 sm:py-3 rounded-full text-sm sm:text-lg font-medium transition">
+        Add Item
+      </button>
+    </div>
+
+    <!-- CARD 5 -->
+    <div class="bg-white rounded-2xl shadow-md p-3 sm:p-4 flex flex-col">
+      <img
+        src="thumbnailss/green tea.jpg"
+        alt="Green Tea"
+        class="rounded-xl object-cover aspect-square"
+        loading="lazy"
+      />
+      <h3 class="mt-3 text-lg sm:text-xl font-semibold text-center"> Green Tea </h3>
+      <p class="text-center text-gray-500 mb-3 text-sm sm:text-base"> 3,000/= </p>
+      <button onclick="addToCart('Green Tea', 3000)" class="mt-auto bg-[#63c89c] hover:bg-[#57b88d] text-white py-2.5 sm:py-3 rounded-full text-sm sm:text-lg font-medium transition">
+        Add Item
+      </button>
+    </div>
+
+    <!-- CARD 6 -->
+    <div class="bg-white rounded-2xl shadow-md p-3 sm:p-4 flex flex-col">
+      <img
+        src="thumbnailss/green tea.jpg"
+        alt="Green Tea"
+        class="rounded-xl object-cover aspect-square"
+        loading="lazy"
+      />
+      <h3 class="mt-3 text-lg sm:text-xl font-semibold text-center"> Green Tea </h3>
+      <p class="text-center text-gray-500 mb-3 text-sm sm:text-base"> 3,000/= </p>
+      <button onclick="addToCart('Green Tea', 3000)" class="mt-auto bg-[#63c89c] hover:bg-[#57b88d] text-white py-2.5 sm:py-3 rounded-full text-sm sm:text-lg font-medium transition">
+        Add Item
+      </button>
+    </div>
+
+    <!-- CARD 7 -->
+    <div class="bg-white rounded-2xl shadow-md p-3 sm:p-4 flex flex-col">
+      <img
+        src="thumbnailss/green tea.jpg"
+        alt="Green Tea"
+        class="rounded-xl object-cover aspect-square"
+        loading="lazy"
+      />
+      <h3 class="mt-3 text-lg sm:text-xl font-semibold text-center"> Green Tea </h3>
+      <p class="text-center text-gray-500 mb-3 text-sm sm:text-base"> 3,000/= </p>
+      <button onclick="addToCart('Green Tea', 3000)" class="mt-auto bg-[#63c89c] hover:bg-[#57b88d] text-white py-2.5 sm:py-3 rounded-full text-sm sm:text-lg font-medium transition">
+        Add Item
+      </button>
+    </div>
+
+    <!-- CARD 8 -->
+    <div class="bg-white rounded-2xl shadow-md p-3 sm:p-4 flex flex-col">
+      <img
+        src="thumbnailss/green tea.jpg"
+        alt="Green Tea"
+        class="rounded-xl object-cover aspect-square"
+        loading="lazy"
+      />
+      <h3 class="mt-3 text-lg sm:text-xl font-semibold text-center"> Green Tea </h3>
+      <p class="text-center text-gray-500 mb-3 text-sm sm:text-base"> 3,000/= </p>
+      <button onclick="addToCart('Green Tea', 3000)" class="mt-auto bg-[#63c89c] hover:bg-[#57b88d] text-white py-2.5 sm:py-3 rounded-full text-sm sm:text-lg font-medium transition">
+        Add Item
+      </button>
+    </div>
+
+    
+    <!-- CARD 8 -->
+    <div class="bg-white rounded-2xl shadow-md p-3 sm:p-4 flex flex-col">
+      <img
+        src="thumbnailss/green tea.jpg"
+        alt="Green Tea"
+        class="rounded-xl object-cover aspect-square"
+        loading="lazy"
+      />
+      <h3 class="mt-3 text-lg sm:text-xl font-semibold text-center"> Green Tea </h3>
+      <p class="text-center text-gray-500 mb-3 text-sm sm:text-base"> 3,000/= </p>
+      <button onclick="addToCart('Green Tea', 3000)" class="mt-auto bg-[#63c89c] hover:bg-[#57b88d] text-white py-2.5 sm:py-3 rounded-full text-sm sm:text-lg font-medium transition">
+        Add Item
+      </button>
+    </div>
+
+    
+    <!-- CARD 8 -->
+    <div class="bg-white rounded-2xl shadow-md p-3 sm:p-4 flex flex-col">
+      <img
+        src="thumbnailss/green tea.jpg"
+        alt="Green Tea"
+        class="rounded-xl object-cover aspect-square"
+        loading="lazy"
+      />
+      <h3 class="mt-3 text-lg sm:text-xl font-semibold text-center"> Green Tea </h3>
+      <p class="text-center text-gray-500 mb-3 text-sm sm:text-base"> 3,000/= </p>
+      <button onclick="addToCart('Green Tea', 3000)" class="mt-auto bg-[#63c89c] hover:bg-[#57b88d] text-white py-2.5 sm:py-3 rounded-full text-sm sm:text-lg font-medium transition">
+        Add Item
+      </button>
+    </div>
+
+    
+    <!-- CARD 8 -->
+    <div class="bg-white rounded-2xl shadow-md p-3 sm:p-4 flex flex-col">
+      <img
+        src="thumbnailss/green tea.jpg"
+        alt="Green Tea"
+        class="rounded-xl object-cover aspect-square"
+        loading="lazy"
+      />
+      <h3 class="mt-3 text-lg sm:text-xl font-semibold text-center"> Green Tea </h3>
+      <p class="text-center text-gray-500 mb-3 text-sm sm:text-base"> 3,000/= </p>
+      <button onclick="addToCart('Green Tea', 3000)" class="mt-auto bg-[#63c89c] hover:bg-[#57b88d] text-white py-2.5 sm:py-3 rounded-full text-sm sm:text-lg font-medium transition">
+        Add Item
+      </button>
+    </div>
+
+    
+    <!-- CARD 8 -->
+    <div class="bg-white rounded-2xl shadow-md p-3 sm:p-4 flex flex-col">
+      <img
+        src="thumbnailss/green tea.jpg"
+        alt="Green Tea"
+        class="rounded-xl object-cover aspect-square"
+        loading="lazy"
+      />
+      <h3 class="mt-3 text-lg sm:text-xl font-semibold text-center"> Green Tea </h3>
+      <p class="text-center text-gray-500 mb-3 text-sm sm:text-base"> 3,000/= </p>
+      <button onclick="addToCart('Green Tea', 3000)" class="mt-auto bg-[#63c89c] hover:bg-[#57b88d] text-white py-2.5 sm:py-3 rounded-full text-sm sm:text-lg font-medium transition">
+        Add Item
+      </button>
+    </div>
+
+    
+    <!-- CARD 8 -->
+    <div class="bg-white rounded-2xl shadow-md p-3 sm:p-4 flex flex-col">
+      <img
+        src="thumbnailss/green tea.jpg"
+        alt="Green Tea"
+        class="rounded-xl object-cover aspect-square"
+        loading="lazy"
+      />
+      <h3 class="mt-3 text-lg sm:text-xl font-semibold text-center"> Green Tea </h3>
+      <p class="text-center text-gray-500 mb-3 text-sm sm:text-base"> 3,000/= </p>
+      <button onclick="addToCart('Green Tea', 3000)" class="mt-auto bg-[#63c89c] hover:bg-[#57b88d] text-white py-2.5 sm:py-3 rounded-full text-sm sm:text-lg font-medium transition">
+        Add Item
+      </button>
+    </div>
+
+
+  </div>
+</section>
+
+
+<section
+  id="icecreamflavours"
+  class="scroll-mt-40 px-3 sm:px-6 lg:px-12 py-16 max-w-7xl mx-auto"
+>
+  <h2 
+    class="text-center text-white font-[abril_fatface] text-3xl sm:text-4xl lg:text-5xl mb-10"
+  >
+    ICE CREAM FLAVOURS
+  </h2>
+
+  <div
+    class="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6"
+  >
+
+    <!-- CARD 1 -->
+    <div class="bg-white rounded-2xl shadow-md p-3 sm:p-4 flex flex-col">
+      <img
+        src="thumbnails/green tea.jpg"
+        alt="Green Tea"
+        class="rounded-xl object-cover aspect-square"
+        loading="lazy"
+      />
+      <h3 class="mt-3 text-lg sm:text-xl font-semibold text-center"> Green Tea </h3>
+      <p class="text-center text-gray-500 mb-3 text-sm sm:text-base"> 3,000/= </p>
+      <button onclick="addToCart('Green Tea', 3000)" class="mt-auto bg-[#63c89c] hover:bg-[#57b88d] text-white py-2.5 sm:py-3 rounded-full text-sm sm:text-lg font-medium transition">
+        Add Item
+      </button>
+    </div>
+
+    <!-- CARD 2 -->
+    <div class="bg-white rounded-2xl shadow-md p-3 sm:p-4 flex flex-col">
+      <img
+        src="thumbnailss/green tea.jpg"
+        alt="Green Tea"
+        class="rounded-xl object-cover aspect-square"
+        loading="lazy"
+      />
+      <h3 class="mt-3 text-lg sm:text-xl font-semibold text-center"> Green Tea </h3>
+      <p class="text-center text-gray-500 mb-3 text-sm sm:text-base"> 3,000/= </p>
+      <button onclick="addToCart('Green Tea', 3000)" class="mt-auto bg-[#63c89c] hover:bg-[#57b88d] text-white py-2.5 sm:py-3 rounded-full text-sm sm:text-lg font-medium transition">
+        Add Item
+      </button>
+    </div>
+
+    <!-- CARD 3 -->
+    <div class="bg-white rounded-2xl shadow-md p-3 sm:p-4 flex flex-col">
+      <img
+        src="thumbnailss/green tea.jpg"
+        alt="Green Tea"
+        class="rounded-xl object-cover aspect-square"
+        loading="lazy"
+      />
+      <h3 class="mt-3 text-lg sm:text-xl font-semibold text-center"> Green Tea </h3>
+      <p class="text-center text-gray-500 mb-3 text-sm sm:text-base"> 3,000/= </p>
+      <button onclick="addToCart('Green Tea', 3000)" class="mt-auto bg-[#63c89c] hover:bg-[#57b88d] text-white py-2.5 sm:py-3 rounded-full text-sm sm:text-lg font-medium transition">
+        Add Item
+      </button>
+    </div>
+
+    <!-- CARD 4 -->
+    <div class="bg-white rounded-2xl shadow-md p-3 sm:p-4 flex flex-col">
+      <img
+        src="thumbnailss/green tea.jpg"
+        alt="Green Tea"
+        class="rounded-xl object-cover aspect-square"
+        loading="lazy"
+      />
+      <h3 class="mt-3 text-lg sm:text-xl font-semibold text-center"> Green Tea </h3>
+      <p class="text-center text-gray-500 mb-3 text-sm sm:text-base"> 3,000/= </p>
+      <button onclick="addToCart('Green Tea', 3000)" class="mt-auto bg-[#63c89c] hover:bg-[#57b88d] text-white py-2.5 sm:py-3 rounded-full text-sm sm:text-lg font-medium transition">
+        Add Item
+      </button>
+    </div>
+
+    <!-- CARD 5 -->
+    <div class="bg-white rounded-2xl shadow-md p-3 sm:p-4 flex flex-col">
+      <img
+        src="thumbnailss/green tea.jpg"
+        alt="Green Tea"
+        class="rounded-xl object-cover aspect-square"
+        loading="lazy"
+      />
+      <h3 class="mt-3 text-lg sm:text-xl font-semibold text-center"> Green Tea </h3>
+      <p class="text-center text-gray-500 mb-3 text-sm sm:text-base"> 3,000/= </p>
+      <button onclick="addToCart('Green Tea', 3000)" class="mt-auto bg-[#63c89c] hover:bg-[#57b88d] text-white py-2.5 sm:py-3 rounded-full text-sm sm:text-lg font-medium transition">
+        Add Item
+      </button>
+    </div>
+
+    <!-- CARD 6 -->
+    <div class="bg-white rounded-2xl shadow-md p-3 sm:p-4 flex flex-col">
+      <img
+        src="thumbnailss/green tea.jpg"
+        alt="Green Tea"
+        class="rounded-xl object-cover aspect-square"
+        loading="lazy"
+      />
+      <h3 class="mt-3 text-lg sm:text-xl font-semibold text-center"> Green Tea </h3>
+      <p class="text-center text-gray-500 mb-3 text-sm sm:text-base"> 3,000/= </p>
+      <button onclick="addToCart('Green Tea', 3000)" class="mt-auto bg-[#63c89c] hover:bg-[#57b88d] text-white py-2.5 sm:py-3 rounded-full text-sm sm:text-lg font-medium transition">
+        Add Item
+      </button>
+    </div>
+
+    <!-- CARD 7 -->
+    <div class="bg-white rounded-2xl shadow-md p-3 sm:p-4 flex flex-col">
+      <img
+        src="thumbnailss/green tea.jpg"
+        alt="Green Tea"
+        class="rounded-xl object-cover aspect-square"
+        loading="lazy"
+      />
+      <h3 class="mt-3 text-lg sm:text-xl font-semibold text-center"> Green Tea </h3>
+      <p class="text-center text-gray-500 mb-3 text-sm sm:text-base"> 3,000/= </p>
+      <button onclick="addToCart('Green Tea', 3000)" class="mt-auto bg-[#63c89c] hover:bg-[#57b88d] text-white py-2.5 sm:py-3 rounded-full text-sm sm:text-lg font-medium transition">
+        Add Item
+      </button>
+    </div>
+
+    <!-- CARD 8 -->
+    <div class="bg-white rounded-2xl shadow-md p-3 sm:p-4 flex flex-col">
+      <img
+        src="thumbnailss/green tea.jpg"
+        alt="Green Tea"
+        class="rounded-xl object-cover aspect-square"
+        loading="lazy"
+      />
+      <h3 class="mt-3 text-lg sm:text-xl font-semibold text-center"> Green Tea </h3>
+      <p class="text-center text-gray-500 mb-3 text-sm sm:text-base"> 3,000/= </p>
+      <button onclick="addToCart('Green Tea', 3000)" class="mt-auto bg-[#63c89c] hover:bg-[#57b88d] text-white py-2.5 sm:py-3 rounded-full text-sm sm:text-lg font-medium transition">
+        Add Item
+      </button>
+    </div>
+
+    
+    <!-- CARD 8 -->
+    <div class="bg-white rounded-2xl shadow-md p-3 sm:p-4 flex flex-col">
+      <img
+        src="thumbnailss/green tea.jpg"
+        alt="Green Tea"
+        class="rounded-xl object-cover aspect-square"
+        loading="lazy"
+      />
+      <h3 class="mt-3 text-lg sm:text-xl font-semibold text-center"> Green Tea </h3>
+      <p class="text-center text-gray-500 mb-3 text-sm sm:text-base"> 3,000/= </p>
+      <button onclick="addToCart('Green Tea', 3000)" class="mt-auto bg-[#63c89c] hover:bg-[#57b88d] text-white py-2.5 sm:py-3 rounded-full text-sm sm:text-lg font-medium transition">
+        Add Item
+      </button>
+    </div>
+
+    
+    <!-- CARD 8 -->
+    <div class="bg-white rounded-2xl shadow-md p-3 sm:p-4 flex flex-col">
+      <img
+        src="thumbnailss/green tea.jpg"
+        alt="Green Tea"
+        class="rounded-xl object-cover aspect-square"
+        loading="lazy"
+      />
+      <h3 class="mt-3 text-lg sm:text-xl font-semibold text-center"> Green Tea </h3>
+      <p class="text-center text-gray-500 mb-3 text-sm sm:text-base"> 3,000/= </p>
+      <button onclick="addToCart('Green Tea', 3000)" class="mt-auto bg-[#63c89c] hover:bg-[#57b88d] text-white py-2.5 sm:py-3 rounded-full text-sm sm:text-lg font-medium transition">
+        Add Item
+      </button>
+    </div>
+
+    
+    <!-- CARD 8 -->
+    <div class="bg-white rounded-2xl shadow-md p-3 sm:p-4 flex flex-col">
+      <img
+        src="thumbnailss/green tea.jpg"
+        alt="Green Tea"
+        class="rounded-xl object-cover aspect-square"
+        loading="lazy"
+      />
+      <h3 class="mt-3 text-lg sm:text-xl font-semibold text-center"> Green Tea </h3>
+      <p class="text-center text-gray-500 mb-3 text-sm sm:text-base"> 3,000/= </p>
+      <button onclick="addToCart('Green Tea', 3000)" class="mt-auto bg-[#63c89c] hover:bg-[#57b88d] text-white py-2.5 sm:py-3 rounded-full text-sm sm:text-lg font-medium transition">
+        Add Item
+      </button>
+    </div>
+
+    
+    <!-- CARD 8 -->
+    <div class="bg-white rounded-2xl shadow-md p-3 sm:p-4 flex flex-col">
+      <img
+        src="thumbnailss/green tea.jpg"
+        alt="Green Tea"
+        class="rounded-xl object-cover aspect-square"
+        loading="lazy"
+      />
+      <h3 class="mt-3 text-lg sm:text-xl font-semibold text-center"> Green Tea </h3>
+      <p class="text-center text-gray-500 mb-3 text-sm sm:text-base"> 3,000/= </p>
+      <button onclick="addToCart('Green Tea', 3000)" class="mt-auto bg-[#63c89c] hover:bg-[#57b88d] text-white py-2.5 sm:py-3 rounded-full text-sm sm:text-lg font-medium transition">
+        Add Item
+      </button>
+    </div>
+
+    
+    <!-- CARD 8 -->
+    <div class="bg-white rounded-2xl shadow-md p-3 sm:p-4 flex flex-col">
+      <img
+        src="thumbnailss/green tea.jpg"
+        alt="Green Tea"
+        class="rounded-xl object-cover aspect-square"
+        loading="lazy"
+      />
+      <h3 class="mt-3 text-lg sm:text-xl font-semibold text-center"> Green Tea </h3>
+      <p class="text-center text-gray-500 mb-3 text-sm sm:text-base"> 3,000/= </p>
+      <button onclick="addToCart('Green Tea', 3000)" class="mt-auto bg-[#63c89c] hover:bg-[#57b88d] text-white py-2.5 sm:py-3 rounded-full text-sm sm:text-lg font-medium transition">
+        Add Item
+      </button>
+    </div>
+
+    
+    <!-- CARD 1 -->
+    <div class="bg-white rounded-2xl shadow-md p-3 sm:p-4 flex flex-col">
+      <img
+        src="thumbnails/green tea.jpg"
+        alt="Green Tea"
+        class="rounded-xl object-cover aspect-square"
+        loading="lazy"
+      />
+      <h3 class="mt-3 text-lg sm:text-xl font-semibold text-center"> Green Tea </h3>
+      <p class="text-center text-gray-500 mb-3 text-sm sm:text-base"> 3,000/= </p>
+      <button onclick="addToCart('Green Tea', 3000)" class="mt-auto bg-[#63c89c] hover:bg-[#57b88d] text-white py-2.5 sm:py-3 rounded-full text-sm sm:text-lg font-medium transition">
+        Add Item
+      </button>
+    </div>
+
+    
+    <!-- CARD 1 -->
+    <div class="bg-white rounded-2xl shadow-md p-3 sm:p-4 flex flex-col">
+      <img
+        src="thumbnails/green tea.jpg"
+        alt="Green Tea"
+        class="rounded-xl object-cover aspect-square"
+        loading="lazy"
+      />
+      <h3 class="mt-3 text-lg sm:text-xl font-semibold text-center"> Green Tea </h3>
+      <p class="text-center text-gray-500 mb-3 text-sm sm:text-base"> 3,000/= </p>
+      <button onclick="addToCart('Green Tea', 3000)" class="mt-auto bg-[#63c89c] hover:bg-[#57b88d] text-white py-2.5 sm:py-3 rounded-full text-sm sm:text-lg font-medium transition">
+        Add Item
+      </button>
+    </div>
+
+    
+    <!-- CARD 1 -->
+    <div class="bg-white rounded-2xl shadow-md p-3 sm:p-4 flex flex-col">
+      <img
+        src="thumbnails/green tea.jpg"
+        alt="Green Tea"
+        class="rounded-xl object-cover aspect-square"
+        loading="lazy"
+      />
+      <h3 class="mt-3 text-lg sm:text-xl font-semibold text-center"> Green Tea </h3>
+      <p class="text-center text-gray-500 mb-3 text-sm sm:text-base"> 3,000/= </p>
+      <button onclick="addToCart('Green Tea', 3000)" class="mt-auto bg-[#63c89c] hover:bg-[#57b88d] text-white py-2.5 sm:py-3 rounded-full text-sm sm:text-lg font-medium transition">
+        Add Item
+      </button>
+    </div>
+
+    
+    <!-- CARD 1 -->
+    <div class="bg-white rounded-2xl shadow-md p-3 sm:p-4 flex flex-col">
+      <img
+        src="thumbnails/green tea.jpg"
+        alt="Green Tea"
+        class="rounded-xl object-cover aspect-square"
+        loading="lazy"
+      />
+      <h3 class="mt-3 text-lg sm:text-xl font-semibold text-center"> Green Tea </h3>
+      <p class="text-center text-gray-500 mb-3 text-sm sm:text-base"> 3,000/= </p>
+      <button onclick="addToCart('Green Tea', 3000)" class="mt-auto bg-[#63c89c] hover:bg-[#57b88d] text-white py-2.5 sm:py-3 rounded-full text-sm sm:text-lg font-medium transition">
+        Add Item
+      </button>
+    </div>
+
+    
+    <!-- CARD 1 -->
+    <div class="bg-white rounded-2xl shadow-md p-3 sm:p-4 flex flex-col">
+      <img
+        src="thumbnails/green tea.jpg"
+        alt="Green Tea"
+        class="rounded-xl object-cover aspect-square"
+        loading="lazy"
+      />
+      <h3 class="mt-3 text-lg sm:text-xl font-semibold text-center"> Green Tea </h3>
+      <p class="text-center text-gray-500 mb-3 text-sm sm:text-base"> 3,000/= </p>
+      <button onclick="addToCart('Green Tea', 3000)" class="mt-auto bg-[#63c89c] hover:bg-[#57b88d] text-white py-2.5 sm:py-3 rounded-full text-sm sm:text-lg font-medium transition">
+        Add Item
+      </button>
+    </div>
+
+
+  </div>
+</section>
+
+
+<section
+  id="chocolateshakes"
+  class="scroll-mt-40 px-3 sm:px-6 lg:px-12 py-16 max-w-7xl mx-auto"
+>
+  <h2 
+    class="text-center text-white font-[abril_fatface] text-3xl sm:text-4xl lg:text-5xl mb-10"
+  >
+    CHOCOLATE SHAKES
+  </h2>
+
+  <div
+    class="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6"
+  >
+
+    <!-- CARD 1 -->
+    <div class="bg-white rounded-2xl shadow-md p-3 sm:p-4 flex flex-col">
+      <img
+        src="thumbnails/green tea.jpg"
+        alt="Green Tea"
+        class="rounded-xl object-cover aspect-square"
+        loading="lazy"
+      />
+      <h3 class="mt-3 text-lg sm:text-xl font-semibold text-center"> Green Tea </h3>
+      <p class="text-center text-gray-500 mb-3 text-sm sm:text-base"> 3,000/= </p>
+      <button onclick="addToCart('Green Tea', 3000)" class="mt-auto bg-[#63c89c] hover:bg-[#57b88d] text-white py-2.5 sm:py-3 rounded-full text-sm sm:text-lg font-medium transition">
+        Add Item
+      </button>
+    </div>
+
+    <!-- CARD 2 -->
+    <div class="bg-white rounded-2xl shadow-md p-3 sm:p-4 flex flex-col">
+      <img
+        src="thumbnailss/green tea.jpg"
+        alt="Green Tea"
+        class="rounded-xl object-cover aspect-square"
+        loading="lazy"
+      />
+      <h3 class="mt-3 text-lg sm:text-xl font-semibold text-center"> Green Tea </h3>
+      <p class="text-center text-gray-500 mb-3 text-sm sm:text-base"> 3,000/= </p>
+      <button onclick="addToCart('Green Tea', 3000)" class="mt-auto bg-[#63c89c] hover:bg-[#57b88d] text-white py-2.5 sm:py-3 rounded-full text-sm sm:text-lg font-medium transition">
+        Add Item
+      </button>
+    </div>
+
+    <!-- CARD 3 -->
+    <div class="bg-white rounded-2xl shadow-md p-3 sm:p-4 flex flex-col">
+      <img
+        src="thumbnailss/green tea.jpg"
+        alt="Green Tea"
+        class="rounded-xl object-cover aspect-square"
+        loading="lazy"
+      />
+      <h3 class="mt-3 text-lg sm:text-xl font-semibold text-center"> Green Tea </h3>
+      <p class="text-center text-gray-500 mb-3 text-sm sm:text-base"> 3,000/= </p>
+      <button onclick="addToCart('Green Tea', 3000)" class="mt-auto bg-[#63c89c] hover:bg-[#57b88d] text-white py-2.5 sm:py-3 rounded-full text-sm sm:text-lg font-medium transition">
+        Add Item
+      </button>
+    </div>
+
+    <!-- CARD 4 -->
+    <div class="bg-white rounded-2xl shadow-md p-3 sm:p-4 flex flex-col">
+      <img
+        src="thumbnailss/green tea.jpg"
+        alt="Green Tea"
+        class="rounded-xl object-cover aspect-square"
+        loading="lazy"
+      />
+      <h3 class="mt-3 text-lg sm:text-xl font-semibold text-center"> Green Tea </h3>
+      <p class="text-center text-gray-500 mb-3 text-sm sm:text-base"> 3,000/= </p>
+      <button onclick="addToCart('Green Tea', 3000)" class="mt-auto bg-[#63c89c] hover:bg-[#57b88d] text-white py-2.5 sm:py-3 rounded-full text-sm sm:text-lg font-medium transition">
+        Add Item
+      </button>
+    </div>
+
+    <!-- CARD 5 -->
+    <div class="bg-white rounded-2xl shadow-md p-3 sm:p-4 flex flex-col">
+      <img
+        src="thumbnailss/green tea.jpg"
+        alt="Green Tea"
+        class="rounded-xl object-cover aspect-square"
+        loading="lazy"
+      />
+      <h3 class="mt-3 text-lg sm:text-xl font-semibold text-center"> Green Tea </h3>
+      <p class="text-center text-gray-500 mb-3 text-sm sm:text-base"> 3,000/= </p>
+      <button onclick="addToCart('Green Tea', 3000)" class="mt-auto bg-[#63c89c] hover:bg-[#57b88d] text-white py-2.5 sm:py-3 rounded-full text-sm sm:text-lg font-medium transition">
+        Add Item
+      </button>
+    </div>
+
+    <!-- CARD 6 -->
+    <div class="bg-white rounded-2xl shadow-md p-3 sm:p-4 flex flex-col">
+      <img
+        src="thumbnailss/green tea.jpg"
+        alt="Green Tea"
+        class="rounded-xl object-cover aspect-square"
+        loading="lazy"
+      />
+      <h3 class="mt-3 text-lg sm:text-xl font-semibold text-center"> Green Tea </h3>
+      <p class="text-center text-gray-500 mb-3 text-sm sm:text-base"> 3,000/= </p>
+      <button onclick="addToCart('Green Tea', 3000)" class="mt-auto bg-[#63c89c] hover:bg-[#57b88d] text-white py-2.5 sm:py-3 rounded-full text-sm sm:text-lg font-medium transition">
+        Add Item
+      </button>
+    </div>
+
+    <!-- CARD 7 -->
+    <div class="bg-white rounded-2xl shadow-md p-3 sm:p-4 flex flex-col">
+      <img
+        src="thumbnailss/green tea.jpg"
+        alt="Green Tea"
+        class="rounded-xl object-cover aspect-square"
+        loading="lazy"
+      />
+      <h3 class="mt-3 text-lg sm:text-xl font-semibold text-center"> Green Tea </h3>
+      <p class="text-center text-gray-500 mb-3 text-sm sm:text-base"> 3,000/= </p>
+      <button onclick="addToCart('Green Tea', 3000)" class="mt-auto bg-[#63c89c] hover:bg-[#57b88d] text-white py-2.5 sm:py-3 rounded-full text-sm sm:text-lg font-medium transition">
+        Add Item
+      </button>
+    </div>
+
+
+    
+    <!-- CARD 8 -->
+    <div class="bg-white rounded-2xl shadow-md p-3 sm:p-4 flex flex-col">
+      <img
+        src="thumbnailss/green tea.jpg"
+        alt="Green Tea"
+        class="rounded-xl object-cover aspect-square"
+        loading="lazy"
+      />
+      <h3 class="mt-3 text-lg sm:text-xl font-semibold text-center"> Green Tea </h3>
+      <p class="text-center text-gray-500 mb-3 text-sm sm:text-base"> 3,000/= </p>
+      <button onclick="addToCart('Green Tea', 3000)" class="mt-auto bg-[#63c89c] hover:bg-[#57b88d] text-white py-2.5 sm:py-3 rounded-full text-sm sm:text-lg font-medium transition">
+        Add Item
+      </button>
+    </div>
+  </div>
+</section>
+
+
+<section
+  id="specialtyshakes"
+  class="scroll-mt-40 px-3 sm:px-6 lg:px-12 py-16 max-w-7xl mx-auto"
+>
+  <h2 
+    class="text-center text-white font-[abril_fatface] text-3xl sm:text-4xl lg:text-5xl mb-10"
+  >
+    SPECIALTY SHAKES
+  </h2>
+
+  <div
+    class="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6"
+  >
+
+    <!-- CARD 1 -->
+    <div class="bg-white rounded-2xl shadow-md p-3 sm:p-4 flex flex-col">
+      <img
+        src="thumbnails/green tea.jpg"
+        alt="Green Tea"
+        class="rounded-xl object-cover aspect-square"
+        loading="lazy"
+      />
+      <h3 class="mt-3 text-lg sm:text-xl font-semibold text-center"> Green Tea </h3>
+      <p class="text-center text-gray-500 mb-3 text-sm sm:text-base"> 3,000/= </p>
+      <button onclick="addToCart('Green Tea', 3000)" class="mt-auto bg-[#63c89c] hover:bg-[#57b88d] text-white py-2.5 sm:py-3 rounded-full text-sm sm:text-lg font-medium transition">
+        Add Item
+      </button>
+    </div>
+
+    <!-- CARD 2 -->
+    <div class="bg-white rounded-2xl shadow-md p-3 sm:p-4 flex flex-col">
+      <img
+        src="thumbnailss/green tea.jpg"
+        alt="Green Tea"
+        class="rounded-xl object-cover aspect-square"
+        loading="lazy"
+      />
+      <h3 class="mt-3 text-lg sm:text-xl font-semibold text-center"> Green Tea </h3>
+      <p class="text-center text-gray-500 mb-3 text-sm sm:text-base"> 3,000/= </p>
+      <button onclick="addToCart('Green Tea', 3000)" class="mt-auto bg-[#63c89c] hover:bg-[#57b88d] text-white py-2.5 sm:py-3 rounded-full text-sm sm:text-lg font-medium transition">
+        Add Item
+      </button>
+    </div>
+
+    <!-- CARD 3 -->
+    <div class="bg-white rounded-2xl shadow-md p-3 sm:p-4 flex flex-col">
+      <img
+        src="thumbnailss/green tea.jpg"
+        alt="Green Tea"
+        class="rounded-xl object-cover aspect-square"
+        loading="lazy"
+      />
+      <h3 class="mt-3 text-lg sm:text-xl font-semibold text-center"> Green Tea </h3>
+      <p class="text-center text-gray-500 mb-3 text-sm sm:text-base"> 3,000/= </p>
+      <button onclick="addToCart('Green Tea', 3000)" class="mt-auto bg-[#63c89c] hover:bg-[#57b88d] text-white py-2.5 sm:py-3 rounded-full text-sm sm:text-lg font-medium transition">
+        Add Item
+      </button>
+    </div>
+
+    
+    <!-- CARD 1 -->
+    <div class="bg-white rounded-2xl shadow-md p-3 sm:p-4 flex flex-col">
+      <img
+        src="thumbnails/green tea.jpg"
+        alt="Green Tea"
+        class="rounded-xl object-cover aspect-square"
+        loading="lazy"
+      />
+      <h3 class="mt-3 text-lg sm:text-xl font-semibold text-center"> Green Tea </h3>
+      <p class="text-center text-gray-500 mb-3 text-sm sm:text-base"> 3,000/= </p>
+      <button onclick="addToCart('Green Tea', 3000)" class="mt-auto bg-[#63c89c] hover:bg-[#57b88d] text-white py-2.5 sm:py-3 rounded-full text-sm sm:text-lg font-medium transition">
+        Add Item
+      </button>
+    </div>
+
+    
+    <!-- CARD 1 -->
+    <div class="bg-white rounded-2xl shadow-md p-3 sm:p-4 flex flex-col">
+      <img
+        src="thumbnails/green tea.jpg"
+        alt="Green Tea"
+        class="rounded-xl object-cover aspect-square"
+        loading="lazy"
+      />
+      <h3 class="mt-3 text-lg sm:text-xl font-semibold text-center"> Green Tea </h3>
+      <p class="text-center text-gray-500 mb-3 text-sm sm:text-base"> 3,000/= </p>
+      <button onclick="addToCart('Green Tea', 3000)" class="mt-auto bg-[#63c89c] hover:bg-[#57b88d] text-white py-2.5 sm:py-3 rounded-full text-sm sm:text-lg font-medium transition">
+        Add Item
+      </button>
+    </div>
+
+    
+    <!-- CARD 1 -->
+    <div class="bg-white rounded-2xl shadow-md p-3 sm:p-4 flex flex-col">
+      <img
+        src="thumbnails/green tea.jpg"
+        alt="Green Tea"
+        class="rounded-xl object-cover aspect-square"
+        loading="lazy"
+      />
+      <h3 class="mt-3 text-lg sm:text-xl font-semibold text-center"> Green Tea </h3>
+      <p class="text-center text-gray-500 mb-3 text-sm sm:text-base"> 3,000/= </p>
+      <button onclick="addToCart('Green Tea', 3000)" class="mt-auto bg-[#63c89c] hover:bg-[#57b88d] text-white py-2.5 sm:py-3 rounded-full text-sm sm:text-lg font-medium transition">
+        Add Item
+      </button>
+    </div>
+
+    
+    <!-- CARD 1 -->
+    <div class="bg-white rounded-2xl shadow-md p-3 sm:p-4 flex flex-col">
+      <img
+        src="thumbnails/green tea.jpg"
+        alt="Green Tea"
+        class="rounded-xl object-cover aspect-square"
+        loading="lazy"
+      />
+      <h3 class="mt-3 text-lg sm:text-xl font-semibold text-center"> Green Tea </h3>
+      <p class="text-center text-gray-500 mb-3 text-sm sm:text-base"> 3,000/= </p>
+      <button onclick="addToCart('Green Tea', 3000)" class="mt-auto bg-[#63c89c] hover:bg-[#57b88d] text-white py-2.5 sm:py-3 rounded-full text-sm sm:text-lg font-medium transition">
+        Add Item
+      </button>
+    </div>
+
+    
+    <!-- CARD 1 -->
+    <div class="bg-white rounded-2xl shadow-md p-3 sm:p-4 flex flex-col">
+      <img
+        src="thumbnails/green tea.jpg"
+        alt="Green Tea"
+        class="rounded-xl object-cover aspect-square"
+        loading="lazy"
+      />
+      <h3 class="mt-3 text-lg sm:text-xl font-semibold text-center"> Green Tea </h3>
+      <p class="text-center text-gray-500 mb-3 text-sm sm:text-base"> 3,000/= </p>
+      <button onclick="addToCart('Green Tea', 3000)" class="mt-auto bg-[#63c89c] hover:bg-[#57b88d] text-white py-2.5 sm:py-3 rounded-full text-sm sm:text-lg font-medium transition">
+        Add Item
+      </button>
+    </div>
+
+    
+    <!-- CARD 1 -->
+    <div class="bg-white rounded-2xl shadow-md p-3 sm:p-4 flex flex-col">
+      <img
+        src="thumbnails/green tea.jpg"
+        alt="Green Tea"
+        class="rounded-xl object-cover aspect-square"
+        loading="lazy"
+      />
+      <h3 class="mt-3 text-lg sm:text-xl font-semibold text-center"> Green Tea </h3>
+      <p class="text-center text-gray-500 mb-3 text-sm sm:text-base"> 3,000/= </p>
+      <button onclick="addToCart('Green Tea', 3000)" class="mt-auto bg-[#63c89c] hover:bg-[#57b88d] text-white py-2.5 sm:py-3 rounded-full text-sm sm:text-lg font-medium transition">
+        Add Item
+      </button>
+    </div>
+
+
+  </div>
+</section>
+
+
+<section
+  id="thesweetspot"
+  class="scroll-mt-40 px-3 sm:px-6 lg:px-12 py-16 max-w-7xl mx-auto"
+>
+  <h2 
+    class="text-center text-white font-[abril_fatface] text-3xl sm:text-4xl lg:text-5xl mb-10"
+  >
+    THE SWEET SPOT
+  </h2>
+
+  <div
+    class="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6"
+  >
+
+    <!-- CARD 1 -->
+    <div class="bg-white rounded-2xl shadow-md p-3 sm:p-4 flex flex-col">
+      <img
+        src="thumbnails/green tea.jpg"
+        alt="Green Tea"
+        class="rounded-xl object-cover aspect-square"
+        loading="lazy"
+      />
+      <h3 class="mt-3 text-lg sm:text-xl font-semibold text-center"> Green Tea </h3>
+      <p class="text-center text-gray-500 mb-3 text-sm sm:text-base"> 3,000/= </p>
+      <button onclick="addToCart('Green Tea', 3000)" class="mt-auto bg-[#63c89c] hover:bg-[#57b88d] text-white py-2.5 sm:py-3 rounded-full text-sm sm:text-lg font-medium transition">
+        Add Item
+      </button>
+    </div>
+
+    <!-- CARD 2 -->
+    <div class="bg-white rounded-2xl shadow-md p-3 sm:p-4 flex flex-col">
+      <img
+        src="thumbnailss/green tea.jpg"
+        alt="Green Tea"
+        class="rounded-xl object-cover aspect-square"
+        loading="lazy"
+      />
+      <h3 class="mt-3 text-lg sm:text-xl font-semibold text-center"> Green Tea </h3>
+      <p class="text-center text-gray-500 mb-3 text-sm sm:text-base"> 3,000/= </p>
+      <button onclick="addToCart('Green Tea', 3000)" class="mt-auto bg-[#63c89c] hover:bg-[#57b88d] text-white py-2.5 sm:py-3 rounded-full text-sm sm:text-lg font-medium transition">
+        Add Item
+      </button>
+    </div>
+
+    <!-- CARD 3 -->
+    <div class="bg-white rounded-2xl shadow-md p-3 sm:p-4 flex flex-col">
+      <img
+        src="thumbnailss/green tea.jpg"
+        alt="Green Tea"
+        class="rounded-xl object-cover aspect-square"
+        loading="lazy"
+      />
+      <h3 class="mt-3 text-lg sm:text-xl font-semibold text-center"> Green Tea </h3>
+      <p class="text-center text-gray-500 mb-3 text-sm sm:text-base"> 3,000/= </p>
+      <button onclick="addToCart('Green Tea', 3000)" class="mt-auto bg-[#63c89c] hover:bg-[#57b88d] text-white py-2.5 sm:py-3 rounded-full text-sm sm:text-lg font-medium transition">
+        Add Item
+      </button>
+    </div>
+
+    
+    <!-- CARD 1 -->
+    <div class="bg-white rounded-2xl shadow-md p-3 sm:p-4 flex flex-col">
+      <img
+        src="thumbnails/green tea.jpg"
+        alt="Green Tea"
+        class="rounded-xl object-cover aspect-square"
+        loading="lazy"
+      />
+      <h3 class="mt-3 text-lg sm:text-xl font-semibold text-center"> Green Tea </h3>
+      <p class="text-center text-gray-500 mb-3 text-sm sm:text-base"> 3,000/= </p>
+      <button onclick="addToCart('Green Tea', 3000)" class="mt-auto bg-[#63c89c] hover:bg-[#57b88d] text-white py-2.5 sm:py-3 rounded-full text-sm sm:text-lg font-medium transition">
+        Add Item
+      </button>
+    </div>
+
+    
+    <!-- CARD 1 -->
+    <div class="bg-white rounded-2xl shadow-md p-3 sm:p-4 flex flex-col">
+      <img
+        src="thumbnails/green tea.jpg"
+        alt="Green Tea"
+        class="rounded-xl object-cover aspect-square"
+        loading="lazy"
+      />
+      <h3 class="mt-3 text-lg sm:text-xl font-semibold text-center"> Green Tea </h3>
+      <p class="text-center text-gray-500 mb-3 text-sm sm:text-base"> 3,000/= </p>
+      <button onclick="addToCart('Green Tea', 3000)" class="mt-auto bg-[#63c89c] hover:bg-[#57b88d] text-white py-2.5 sm:py-3 rounded-full text-sm sm:text-lg font-medium transition">
+        Add Item
+      </button>
+    </div>
+
+    
+    <!-- CARD 1 -->
+    <div class="bg-white rounded-2xl shadow-md p-3 sm:p-4 flex flex-col">
+      <img
+        src="thumbnails/green tea.jpg"
+        alt="Green Tea"
+        class="rounded-xl object-cover aspect-square"
+        loading="lazy"
+      />
+      <h3 class="mt-3 text-lg sm:text-xl font-semibold text-center"> Green Tea </h3>
+      <p class="text-center text-gray-500 mb-3 text-sm sm:text-base"> 3,000/= </p>
+      <button onclick="addToCart('Green Tea', 3000)" class="mt-auto bg-[#63c89c] hover:bg-[#57b88d] text-white py-2.5 sm:py-3 rounded-full text-sm sm:text-lg font-medium transition">
+        Add Item
+      </button>
+    </div>
+
+    
+    <!-- CARD 1 -->
+    <div class="bg-white rounded-2xl shadow-md p-3 sm:p-4 flex flex-col">
+      <img
+        src="thumbnails/green tea.jpg"
+        alt="Green Tea"
+        class="rounded-xl object-cover aspect-square"
+        loading="lazy"
+      />
+      <h3 class="mt-3 text-lg sm:text-xl font-semibold text-center"> Green Tea </h3>
+      <p class="text-center text-gray-500 mb-3 text-sm sm:text-base"> 3,000/= </p>
+      <button onclick="addToCart('Green Tea', 3000)" class="mt-auto bg-[#63c89c] hover:bg-[#57b88d] text-white py-2.5 sm:py-3 rounded-full text-sm sm:text-lg font-medium transition">
+        Add Item
+      </button>
+    </div>
+
+
+  </div>
+</section>
+
+
+<section
+  id="bakedbliss"
+  class="scroll-mt-40 px-3 sm:px-6 lg:px-12 py-16 max-w-7xl mx-auto"
+>
+  <h2 
+    class="text-center text-white font-[abril_fatface] text-3xl sm:text-4xl lg:text-5xl mb-10"
+  >
+    BAKED BLISS
+  </h2>
+
+  <div
+    class="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6"
+  >
+
+    <!-- CARD 1 -->
+    <div class="bg-white rounded-2xl shadow-md p-3 sm:p-4 flex flex-col">
+      <img
+        src="thumbnails/green tea.jpg"
+        alt="Green Tea"
+        class="rounded-xl object-cover aspect-square"
+        loading="lazy"
+      />
+      <h3 class="mt-3 text-lg sm:text-xl font-semibold text-center"> Green Tea </h3>
+      <p class="text-center text-gray-500 mb-3 text-sm sm:text-base"> 3,000/= </p>
+      <button onclick="addToCart('Green Tea', 3000)" class="mt-auto bg-[#63c89c] hover:bg-[#57b88d] text-white py-2.5 sm:py-3 rounded-full text-sm sm:text-lg font-medium transition">
+        Add Item
+      </button>
+    </div>
+
+    <!-- CARD 2 -->
+    <div class="bg-white rounded-2xl shadow-md p-3 sm:p-4 flex flex-col">
+      <img
+        src="thumbnailss/green tea.jpg"
+        alt="Green Tea"
+        class="rounded-xl object-cover aspect-square"
+        loading="lazy"
+      />
+      <h3 class="mt-3 text-lg sm:text-xl font-semibold text-center"> Green Tea </h3>
+      <p class="text-center text-gray-500 mb-3 text-sm sm:text-base"> 3,000/= </p>
+      <button onclick="addToCart('Green Tea', 3000)" class="mt-auto bg-[#63c89c] hover:bg-[#57b88d] text-white py-2.5 sm:py-3 rounded-full text-sm sm:text-lg font-medium transition">
+        Add Item
+      </button>
+    </div>
+
+    <!-- CARD 3 -->
+    <div class="bg-white rounded-2xl shadow-md p-3 sm:p-4 flex flex-col">
+      <img
+        src="thumbnailss/green tea.jpg"
+        alt="Green Tea"
+        class="rounded-xl object-cover aspect-square"
+        loading="lazy"
+      />
+      <h3 class="mt-3 text-lg sm:text-xl font-semibold text-center"> Green Tea </h3>
+      <p class="text-center text-gray-500 mb-3 text-sm sm:text-base"> 3,000/= </p>
+      <button onclick="addToCart('Green Tea', 3000)" class="mt-auto bg-[#63c89c] hover:bg-[#57b88d] text-white py-2.5 sm:py-3 rounded-full text-sm sm:text-lg font-medium transition">
+        Add Item
+      </button>
+    </div>
+
+    
+    <!-- CARD 1 -->
+    <div class="bg-white rounded-2xl shadow-md p-3 sm:p-4 flex flex-col">
+      <img
+        src="thumbnails/green tea.jpg"
+        alt="Green Tea"
+        class="rounded-xl object-cover aspect-square"
+        loading="lazy"
+      />
+      <h3 class="mt-3 text-lg sm:text-xl font-semibold text-center"> Green Tea </h3>
+      <p class="text-center text-gray-500 mb-3 text-sm sm:text-base"> 3,000/= </p>
+      <button onclick="addToCart('Green Tea', 3000)" class="mt-auto bg-[#63c89c] hover:bg-[#57b88d] text-white py-2.5 sm:py-3 rounded-full text-sm sm:text-lg font-medium transition">
+        Add Item
+      </button>
+    </div>
+
+    
+    <!-- CARD 1 -->
+    <div class="bg-white rounded-2xl shadow-md p-3 sm:p-4 flex flex-col">
+      <img
+        src="thumbnails/green tea.jpg"
+        alt="Green Tea"
+        class="rounded-xl object-cover aspect-square"
+        loading="lazy"
+      />
+      <h3 class="mt-3 text-lg sm:text-xl font-semibold text-center"> Green Tea </h3>
+      <p class="text-center text-gray-500 mb-3 text-sm sm:text-base"> 3,000/= </p>
+      <button onclick="addToCart('Green Tea', 3000)" class="mt-auto bg-[#63c89c] hover:bg-[#57b88d] text-white py-2.5 sm:py-3 rounded-full text-sm sm:text-lg font-medium transition">
+        Add Item
+      </button>
+    </div>
+
+    
+    <!-- CARD 1 -->
+    <div class="bg-white rounded-2xl shadow-md p-3 sm:p-4 flex flex-col">
+      <img
+        src="thumbnails/green tea.jpg"
+        alt="Green Tea"
+        class="rounded-xl object-cover aspect-square"
+        loading="lazy"
+      />
+      <h3 class="mt-3 text-lg sm:text-xl font-semibold text-center"> Green Tea </h3>
+      <p class="text-center text-gray-500 mb-3 text-sm sm:text-base"> 3,000/= </p>
+      <button onclick="addToCart('Green Tea', 3000)" class="mt-auto bg-[#63c89c] hover:bg-[#57b88d] text-white py-2.5 sm:py-3 rounded-full text-sm sm:text-lg font-medium transition">
+        Add Item
+      </button>
+    </div>
+
+    
+    <!-- CARD 1 -->
+    <div class="bg-white rounded-2xl shadow-md p-3 sm:p-4 flex flex-col">
+      <img
+        src="thumbnails/green tea.jpg"
+        alt="Green Tea"
+        class="rounded-xl object-cover aspect-square"
+        loading="lazy"
+      />
+      <h3 class="mt-3 text-lg sm:text-xl font-semibold text-center"> Green Tea </h3>
+      <p class="text-center text-gray-500 mb-3 text-sm sm:text-base"> 3,000/= </p>
+      <button onclick="addToCart('Green Tea', 3000)" class="mt-auto bg-[#63c89c] hover:bg-[#57b88d] text-white py-2.5 sm:py-3 rounded-full text-sm sm:text-lg font-medium transition">
+        Add Item
+      </button>
+    </div>
+
+    
+    <!-- CARD 1 -->
+    <div class="bg-white rounded-2xl shadow-md p-3 sm:p-4 flex flex-col">
+      <img
+        src="thumbnails/green tea.jpg"
+        alt="Green Tea"
+        class="rounded-xl object-cover aspect-square"
+        loading="lazy"
+      />
+      <h3 class="mt-3 text-lg sm:text-xl font-semibold text-center"> Green Tea </h3>
+      <p class="text-center text-gray-500 mb-3 text-sm sm:text-base"> 3,000/= </p>
+      <button onclick="addToCart('Green Tea', 3000)" class="mt-auto bg-[#63c89c] hover:bg-[#57b88d] text-white py-2.5 sm:py-3 rounded-full text-sm sm:text-lg font-medium transition">
+        Add Item
+      </button>
+    </div>
+
+    
+    <!-- CARD 1 -->
+    <div class="bg-white rounded-2xl shadow-md p-3 sm:p-4 flex flex-col">
+      <img
+        src="thumbnails/green tea.jpg"
+        alt="Green Tea"
+        class="rounded-xl object-cover aspect-square"
+        loading="lazy"
+      />
+      <h3 class="mt-3 text-lg sm:text-xl font-semibold text-center"> Green Tea </h3>
+      <p class="text-center text-gray-500 mb-3 text-sm sm:text-base"> 3,000/= </p>
+      <button onclick="addToCart('Green Tea', 3000)" class="mt-auto bg-[#63c89c] hover:bg-[#57b88d] text-white py-2.5 sm:py-3 rounded-full text-sm sm:text-lg font-medium transition">
+        Add Item
+      </button>
+    </div>
+
+
+  </div>
+</section>
+
+
+<section id="reviews" class="relative w-full py-28 scroll-mt-[100px] bg-[#050505] text-white overflow-hidden">
+  
+  <!-- Section Header with Vertical Accent -->
+  <div class="flex flex-col items-center mb-20 px-4">
+    <span class="text-white uppercase tracking-[0.5em] text-[10px] font-black mb-4">Testimonials</span>
+    <h2 id="reviews" class="text-4xl md:text-8xl font-[Abril Fatface]  tracking-tighter text-[#63c89c] text-center">
+      the <span class="text-white">LATTE</span> vibes
+    </h2>
+    <p class="text-zinc-500 mt-4 font-light italic">Don't take our word for it—take theirs.</p>
+  </div>
+
+  <!-- Reviews Slider Container -->
+  <div class="flex gap-8 overflow-x-auto scroll-smooth snap-x snap-mandatory px-8 md:px-24 pb-20 [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden">
+
+    <!-- Card 1 -->
+    <div class="snap-center shrink-0 w-[88vw] md:w-[500px] group relative">
+      <!-- Decorative Background Quote -->
+      <span class="absolute -top-5 -left-6 text-[12rem] font-serif text-white select-none group-hover:text-[#b93d22]/10 transition-colors duration-700">1</span>
+      
+      <div class="relative z-10 bg-zinc-900/40 backdrop-blur-md border border-zinc-800/50 rounded-[3rem] p-10 h-full flex flex-col justify-between transition-all duration-500 hover:border-[#b93d22]/30 hover:-translate-y-3">
+        
+        <div>
+          <div class="flex gap-1.5 mb-8">
+            <i class="fa-solid fa-star text-[#63c89c] text-xs"></i>
+            <i class="fa-solid fa-star text-[#63c89c] text-xs"></i>
+            <i class="fa-solid fa-star text-[#63c89c] text-xs"></i>
+            <i class="fa-solid fa-star text-[#63c89c] text-xs"></i>
+            <i class="fa-solid fa-star text-[#63c89c] text-xs"></i>
+          </div>
+          
+          <p class="text-xl md:text-2xl font-light leading-relaxed text-zinc-200">
+            "Food was served as requested. Chicken extra cooked, <span class="text-white font-medium italic">Just how i love it.</span>"
+          </p>
+        </div>
+
+        <div class="mt-12 pt-8 border-t border-zinc-800/50 flex items-center justify-between">
+          <div class="flex items-center gap-4">
+            <div class="h-14 w-14 rounded-2xl bg-zinc-800 flex items-center justify-center border border-zinc-700 group-hover:border-[#b93d22]/50 transition-all duration-500 overflow-hidden">
+                <span class="text-[#63c89c] font-black text-xl">C</span>
+            </div>
+            <div>
+              <p class="font-bold text-white text-lg tracking-tight">Chacha C.</p>
+              <span class="text-zinc-600 text-[10px] uppercase tracking-[0.2em] font-bold">Verified Google Review</span>
+            </div>
+          </div>
+          <i class="fa-brands fa-google text-zinc-800 group-hover:text-white transition-colors duration-500"></i>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="snap-center shrink-0 w-[88vw] md:w-[500px] group relative">
+      <span class="absolute -top-5 -left-6 text-[12rem] font-serif text-white select-none group-hover:text-[#b93d22]/10 transition-colors duration-700">2</span>
+      
+      <div class="relative z-10 bg-zinc-900/40 backdrop-blur-md border border-zinc-800/50 rounded-[3rem] p-10 h-full flex flex-col justify-between transition-all duration-500 hover:border-[#b93d22]/30 hover:-translate-y-3">
+        
+        <div>
+          <div class="flex gap-1.5 mb-8">
+            <i class="fa-solid fa-star text-[#63c89c] text-xs"></i>
+            <i class="fa-solid fa-star text-[#63c89c] text-xs"></i>
+            <i class="fa-solid fa-star text-[#63c89c] text-xs"></i>
+            <i class="fa-solid fa-star text-[#63c89c] text-xs"></i>
+            <i class="fa-solid fa-star text-[#63c89c] text-xs"></i>
+          </div>
+          
+          <p class="text-xl md:text-2xl font-light leading-relaxed text-zinc-200">
+            "Food was amazing, we tried a few different things. <span class="text-white font-medium italic">Staff were friendly</span> and restaurant has a lovely owner!"
+          </p>
+        </div>
+
+        <div class="mt-12 pt-8 border-t border-zinc-800/50 flex items-center justify-between">
+          <div class="flex items-center gap-4">
+            <div class="h-14 w-14 rounded-2xl bg-zinc-800 flex items-center justify-center border border-zinc-700 group-hover:border-[#b93d22]/50 transition-all">
+                <span class="text-[#63c89c] font-black text-xl">R</span>
+            </div>
+            <div>
+              <p class="font-bold text-white text-lg tracking-tight">Roomana L.</p>
+              <span class="text-zinc-600 text-[10px] uppercase tracking-[0.2em] font-bold">Verified Google Review</span>
+            </div>
+          </div>
+          <i class="fa-brands fa-google text-zinc-800 group-hover:text-white transition-colors"></i>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="snap-center shrink-0 w-[88vw] md:w-[500px] group relative">
+      <span class="absolute -top-10 -left-6 text-[12rem] font-serif text-white select-none group-hover:text-[#b93d22]/10 transition-colors duration-700">3</span>
+      
+      <div class="relative z-10 bg-zinc-900/40 backdrop-blur-md border border-zinc-800/50 rounded-[3rem] p-10 h-full flex flex-col justify-between transition-all duration-500 hover:border-[#b93d22]/30 hover:-translate-y-3">
+        
+        <div>
+          <div class="flex gap-1.5 mb-8">
+            <i class="fa-solid fa-star text-[#63c89c] text-xs"></i>
+            <i class="fa-solid fa-star text-[#63c89c] text-xs"></i>
+            <i class="fa-solid fa-star text-[#63c89c] text-xs"></i>
+            <i class="fa-solid fa-star text-[#63c89c] text-xs"></i>
+            <i class="fa-solid fa-star text-[#63c89c] text-xs"></i>
+          </div>
+          
+          <p class="text-xl md:text-2xl font-light leading-relaxed text-zinc-200 uppercase font-black tracking-tight">
+            "One of the <span class="text-[#63c89c]">Best Places</span> I have ever eaten at in the entire world!"
+          </p>
+        </div>
+
+        <div class="mt-12 pt-8 border-t border-zinc-800/50 flex items-center justify-between">
+          <div class="flex items-center gap-4">
+            <div class="h-14 w-14 rounded-2xl bg-zinc-800 flex items-center justify-center border border-zinc-700 group-hover:border-[#b93d22]/50 transition-all">
+                <span class="text-[#63c89c] font-black text-xl">M</span>
+            </div>
+            <div>
+              <p class="font-bold text-white text-lg tracking-tight">Muhammad</p>
+              <span class="text-zinc-600 text-[10px] uppercase tracking-[0.2em] font-bold">Via TripAdvisor</span>
+            </div>
+          </div>
+          <i class="fa-brands fa-tripadvisor text-zinc-800 group-hover:text-white transition-colors"></i>
+        </div>
+      </div>
+    </div>
+
+    <div class="shrink-0 w-12 md:w-32"></div>
+  </div>
+</section>
+
+
+<section class="w-full py-20 px-6 bg-white text-white overflow-hidden relative">
+
+  <div id="leave-review" class="max-w-6xl mx-auto relative z-10">
+    
+    <!-- Section Header -->
+    <div class="flex flex-col md:flex-row md:items-end justify-between mb-20 gap-8">
+      <div class="max-w-xl">
+        <span class="text-[#63c89c] uppercase tracking-[0.4em] text-xs font-bold mb-4 block">Guestbook</span>
+        <h2 class="font-[Abril_Fatface] text-6xl md:text-8xl text-black leading-none">
+          WE VALUE YOUR <span class="text-[#63c89c]">FEEDBACK.</span>
+        </h2>
+        <p class="text-zinc-500 mt-8 text-lg font-light tracking-wide">
+          Share your experience with us on your favorite platform. Your voice is the secret ingredient to our growth.
+        </p>
+      </div>
+      <!-- Scroll Indicator -->
+      <div class="hidden md:flex flex-col items-center gap-4">
+        <div class="h-24 w-[1px] bg-gradient-to-b from-transparent via-[#63c89c] to-transparent"></div>
+        <i class="fa-solid fa-star text-[#63c89c] text-xs animate-pulse"></i>
+      </div>
+    </div>
+
+    <!-- Integrated Action Hub (Grid) -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-0 border-y border-zinc-800/50">
+      
+      <!-- TripAdvisor Integration -->
+      <a href="https://tripadvisor.com" target="_blank" 
+         class="group relative py-10 px-8 border-b md:border-b-0 md:border-r border-zinc-800/50 flex flex-col items-center text-center transition-all duration-500 hover:bg-[#b93d22]/5">
+        <div class="mb-8 opacity-40 group-hover:opacity-100 transition-all duration-500 group-hover:scale-110">
+          <i class="fa-brands fa-tripadvisor text-5xl"></i>
+        </div>
+        <h3 class="text-xs uppercase tracking-[0.3em] text-black mb-2">Review Us On</h3>
+        <span class="text-3xl font-[Abril_Fatface] text-black group-hover:text-[#b93d22] transition-colors tracking-wide">TripAdvisor</span>
+        
+        <div class="mt-8 flex gap-1 text-[#63c89c] group-hover:opacity-100 transition-all transform translate-y-2 group-hover:translate-y-0">
+          <i class="fa-solid fa-star text-[10px]"></i><i class="fa-solid fa-star text-[10px]"></i><i class="fa-solid fa-star text-[10px]"></i><i class="fa-solid fa-star text-[10px]"></i><i class="fa-solid fa-star text-[10px]"></i>
+        </div>
+      </a>
+
+      <!-- Google Integration (With your PlaceID) -->
+      <a href="https://google.com" target="_blank"
+         class="group relative py-10 px-8 border-b md:border-b-0 md:border-r border-zinc-800/50 flex flex-col items-center text-center transition-all duration-500 hover:bg-[#b93d22]/5">
+        <div class="mb-8 text-[#63c89c] group-hover:opacity-100 transition-all duration-500 group-hover:scale-110">
+          <i class="fa-brands fa-google text-5xl"></i>
+        </div>
+        <h3 class="text-xs uppercase tracking-[0.3em] text-black mb-2">Find Us On</h3>
+        <span class="text-3xl font-[Abril_Fatface] text-black group-hover:text-[#b93d22] transition-colors tracking-wide">Google Search</span>
+        
+        <div class="mt-8 px-6 py-2 rounded-full border border-[#63c89c]/30 text-[#63c89c] text-[10px] font-black uppercase tracking-[0.2em] group-hover:opacity-100 transition-all transform translate-y-2 group-hover:translate-y-0">
+          Write a Review
+        </div>
+      </a>
+
+      <!-- WhatsApp Integration (With your Number) -->
+      <a href="https://wa.me" target="_blank"
+         class="group relative py-10 px-8 flex flex-col items-center text-center transition-all duration-500 hover:bg-[#b93d22]/5">
+        <div class="mb-8 group-hover:opacity-100 transition-all duration-500 group-hover:scale-110">
+          <i class="fa-brands fa-whatsapp text-5xl text-[#25d366]"></i>
+        </div>
+        <h3 class="text-xs uppercase tracking-[0.3em] text-black mb-2">Send Us A</h3>
+        <span class="text-3xl font-[Abril_Fatface] text-black group-hover:text-[#b93d22] transition-colors tracking-wide">WhatsApp Message</span>
+        
+        <div class="mt-8 flex items-center gap-3 opacity-60 group-hover:opacity-100 transition-opacity">
+           <span class="relative flex h-2 w-2">
+             <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#25d366] opacity-75"></span>
+             <span class="relative inline-flex rounded-full h-2 w-2 bg-green-600"></span>
+           </span>
+           <span class="text-[10px] text-black uppercase tracking-widest font-bold">Manager Online</span>
+        </div>
+      </a>
+
+    </div>
+
+</section>
+
+
+<section class="w-full py-24 bg-zinc-950 text-white overflow-hidden">
+
+  <!-- Section Title -->
+  <div class="text-center mb-16 px-6">
+    <h2 id="location" class="font-[Abril_Fatface] text-5xl md:text-7xl scroll-mt-[200px] text-white tracking-tight">
+      LOCATION
+    </h2>
+    <div class="h-1 w-full bg-[#63c89c] mx-auto mt-4 rounded-full"></div>
+  </div>
+
+  <!-- Full-Width Map Wrapper -->
+  <div class="relative w-full group">
+    
+    <!-- Map Container: Aspect-video on mobile, taller on desktop -->
+    <div class="relative w-full h-[450px] md:h-[650px] group-hover:opacity-100 transition-all duration-1000 ease-in-out">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3260.3829003729966!2d39.2820387!3d-6.771766399999988!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x185c4d73c0348f51%3A0xc9c045987730e0f3!2sKayy%20Kafe%20%26%20Grill%20-%20Coco%20Beach!5e1!3m2!1sen!2stz!4v1757552159386!5m2!1sen!2stz"
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+        class="absolute inset-0 w-full h-full border-0"
+        allowfullscreen
+      ></iframe>
+      
+      <!-- Overlay Gradient for better legibility of the floating card -->
+      <div class="absolute inset-0 bg-gradient-to-t from-zinc-950 via-transparent to-transparent pointer-events-none"></div>
+    </div>
+
+    <!-- Floating Address Card -->
+    <div class="absolute bottom-10 left-1/2 -translate-x-1/2 w-[90%] max-w-md z-20">
+      <div class="bg-zinc-900/80 backdrop-blur-xl border border-zinc-800 p-6 rounded-3xl shadow-2xl flex flex-col md:flex-row items-center justify-between gap-4 text-center md:text-left">
+        <div>
+          <h4 class="text-[#63c89c] font-[Abril_Fatface] text-xl">THE SCOOP COCO</h4>
+          <p class="text-zinc-400 text-xs uppercase tracking-widest mt-1">Coco Beach, Dar es Salaam</p>
+        </div>
+        <a 
+          href="https://goo.gl" 
+          target="_blank"
+          class="bg-[#63c89c] hover:bg-white hover:text-black px-6 py-3 rounded-full text-sm font-bold transition-all active:scale-95 flex items-center gap-2"
+        >
+          <i class="fa-solid fa-diamond-turn-right"></i>
+          Get Directions
+        </a>
+      </div>
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- FOOTER SECTION -->
+<footer class="bg-zinc-950 text-zinc-400 py-32 px-6 border-t border-zinc-800">
+    <div class="max-w-7xl mx-auto">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+            
+            <!-- Brand Column -->
+          <div class="space-y-6">
+    <!-- Logos Row: Now Left to Right -->
+   <div class="space-y-6">
+    <!-- Logos Row -->
+    <div class="flex items-center space-x-4">
+        <img src="thumbnailss/kayynew.PNG" alt="kayy. Logo" class="h-24 w-auto rounded-full hover:grayscale-0 transition-all duration-300">
+        <img src="thumbnailss/two cones.PNG" alt="The Scoop Logo" class="h-24 w-auto rounded-full hover:grayscale-0 transition-all duration-300">
+    </div>
+
+    <p class="text-sm leading-relaxed text-zinc-400">
+        A unique sibling-run destination where savory grills meet artisan sweets. Two concepts, one unforgettable experience.
+    </p>
+
+    <!-- Updated Social Icons Row -->
+    <div class="flex flex-wrap items-center gap-5">
+        <!-- Instagram -->
+        <a href="#" class="text-zinc-400 hover:text-orange-500 transition-colors">
+            <span class="sr-only">Instagram</span>
+            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+        </a>
+
+        <!-- TikTok -->
+        <a href="#" class="text-zinc-400 hover:text-white transition-colors">
+            <span class="sr-only">TikTok</span>
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 448 512"><path d="M448 209.91a210.06 210.06 0 0 1-122.77-39.25V349.38A162.55 162.55 0 1 1 185 188.31V278.2a74.62 74.62 0 1 0 52.23 71.18V0l88 0a121.18 121.18 0 0 0 1.86 22.17A122.18 122.18 0 0 0 381 102.39a121.43 121.43 0 0 0 67 20.14Z"/></svg>
+        </a>
+
+     <!-- Authentic Facebook Icon -->
+<a href="YOUR_FACEBOOK_PAGE_URL" target="_blank" class="text-zinc-400 hover:text-[#1877F2] transition-all duration-300 transform hover:scale-110">
+    <span class="sr-only">Facebook</span>
+    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://w3.org">
+        <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.469h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+    </svg>
+</a>
+
+
+
+        <!-- Google Reviews -->
+        <a href="https://google.com" target="_blank" class="text-zinc-400 hover:text-blue-400 transition-colors">
+            <span class="sr-only">Google Reviews</span>
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 488 512"><path d="M488 261.8C488 403.3 391.1 504 248 504 110.8 504 0 393.2 0 256S110.8 8 248 8c66.8 0 123 24.5 166.3 64.9l-67.5 64.9C258.5 52.6 94.3 116.6 94.3 256c0 86.5 69.1 156.6 153.7 156.6 98.2 0 135-70.4 140.8-106.9H248v-85.3h236.1c2.3 12.7 3.9 24.9 3.9 41.4z"/></svg>
+        </a>
+    </div>
+</div>
+</div>
+
+
+            <!-- Kayy. Kafe Links -->
+            <div>
+                <h4 class="text-white font-bold uppercase tracking-widest text-xs mb-6">kayy. Kafe & Grill</h4>
+                <ul class="space-y-4 text-sm">
+                    <li><a href="#" class="hover:text-orange-500 transition-colors">Main Menu</a></li>
+                    <li><a href="#" class="hover:text-orange-500 transition-colors">Daily Specials</a></li>
+                    <li><a href="#" class="hover:text-orange-500 transition-colors">Steaks & Grills</a></li>
+                    <li><a href="#" class="hover:text-orange-500 transition-colors">Online Ordering</a></li>
+                </ul>
+            </div>
+
+            <!-- The Scoop Links -->
+            <div>
+                <h4 class="text-white font-bold uppercase tracking-widest text-xs mb-6">The Scoop</h4>
+                <ul class="space-y-4 text-sm">
+                    <li><a href="#" class="hover:text-rose-400 transition-colors">Gelato Flavors</a></li>
+                    <li><a href="#" class="hover:text-rose-400 transition-colors">Coffee Bar</a></li>
+                    <li><a href="#" class="hover:text-rose-400 transition-colors">Waffles & Crepes</a></li>
+                    <li><a href="#" class="hover:text-rose-400 transition-colors">Party Buckets</a></li>
+                </ul>
+            </div>
+
+            <!-- Contact & Hours -->
+            <div class="space-y-4 text-sm">
+                <h4 class="text-white font-bold uppercase tracking-widest text-xs mb-6">Visit Us</h4>
+                <p>123 Restaurant Row,<br>City Name, State 12345</p>
+                <p class="text-white font-medium">Mon - Sun: 10:00 AM - 11:00 PM</p>
+                <p class="pt-2">Email: <a href="mailto:hello@kayy.com" class="text-[#b93d22]">hello@kayy.com</a></p>
+                <p>Phone: <a href="tel:+123456789" class="text-[#b93d22]">(123) 456-7890</a></p>
+            </div>
+        </div>
+
+        <!-- Copyright -->
+        <div class="pt-8 border-t border-zinc-900 flex flex-col md:flex-row justify-between items-center text-xs">
+            <p>&copy; 2024 kayy. Kafe & The Scoop. All Rights Reserved.</p>
+            <div class="flex space-x-6 mt-4 md:mt-0">
+                <a href="#" class="hover:text-white transition-colors">Privacy Policy</a>
+                <a href="#" class="hover:text-white transition-colors">Terms of Service</a>
+            </div>
+        </div>
+
+        <p style="text-align: center;" class="text-xs mt-5 ">
+          Designed And Developed By <a href="https://synlotech.com"><span class="font-bold text-[#b93d22]">SYNLOTECH TECHNOLOGIES</span></a>
+        </p>
+    </div>
+</footer>
+
+
+<!-- TOAST NOTIFICATION: Styled as a Floating Pill -->
+<div
+  id="toast"
+  class="
+    fixed top-10 left-1/2 -translate-x-1/2
+    z-[10000]
+    min-w-[280px]
+    px-6 py-4
+    bg-black/90 backdrop-blur-md
+    text-white text-center
+    rounded-2xl shadow-2xl
+    flex items-center justify-center gap-3
+    transform transition-all duration-300 -translate-y-20 opacity-0
+  "
+>
+  <i class="fa-solid fa-circle-check text-green-400"></i>
+  <span id="toast-message" class="font-medium">Added to basket</span>
+</div>
+
+<!-- FLOATING BASKET BAR -->
+<div class="fixed bottom-6 left-0 w-full px-6 z-[9999]">
+  <a href="Basket.html" class="block max-w-xl mx-auto">
+    <button 
+      id="cart-toggle"
+      class="
+        w-full 
+        bg-[#63c89c] 
+        text-white 
+        py-5 rounded-2xl
+        shadow-[0_10px_30px_rgba(185,61,34,0.3)]
+        hover:shadow-[0_15px_35px_rgba(185,61,34,0.4)]
+        active:scale-95
+        transition-all duration-200
+        flex items-center justify-center gap-4
+        relative
+        overflow-hidden
+      "
+    >
+      <!-- Glossy Reflection Effect -->
+      <div class="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full hover:animate-[shimmer_1.5s_infinite]"></div>
+      
+      <i class="fa-solid fa-bag-shopping text-xl"></i>
+      <span class="text-lg font-bold tracking-wide">VIEW BASKET</span>
+      
+      <!-- Dynamic Counter Badge -->
+      <span 
+        id="cart-count" 
+        class="bg-white text-[#63c89c] px-2.5 py-0.5 rounded-lg text-sm font-black shadow-sm"
+      >
+        0
+      </span>
+    </button>
+  </a>
+</div>
+
+
+
+<style>
+  /* Custom Animations */
+  @keyframes shimmer {
+    100% { transform: translateX(100%); }
+  }
+
+  .toast-show {
+    transform: translate(-50%, 0) !important;
+    opacity: 1 !important;
+  }
+</style>
+
+<script>
+  const navToggle = document.getElementById('navToggle');
+  const fullMenu = document.getElementById('fullMenu');
+  const topBar = document.getElementById('topBar');
+  const midBar = document.getElementById('midBar');
+  const botBar = document.getElementById('botBar');
+  const menuLinks = document.querySelectorAll('.menu-link');
+
+  navToggle.onclick = function() {
+    if (fullMenu.classList.contains('translate-y-full')) {
+      // OPEN
+      fullMenu.classList.replace('translate-y-full', 'translate-y-0');
+      topBar.style.transform = "translateY(11px) rotate(45deg)";
+      midBar.style.opacity = "0";
+      botBar.style.transform = "translateY(-11px) rotate(-45deg)";
+      document.body.style.overflow = "hidden";
+    } else {
+      // CLOSE
+      fullMenu.classList.replace('translate-y-0', 'translate-y-full');
+      topBar.style.transform = "none";
+      midBar.style.opacity = "1";
+      botBar.style.transform = "none";
+      document.body.style.overflow = "auto";
+    }
+  };
+
+  // Close when links are clicked
+  menuLinks.forEach(link => {
+    link.onclick = function() {
+      fullMenu.classList.replace('translate-y-0', 'translate-y-full');
+      topBar.style.transform = "none";
+      midBar.style.opacity = "1";
+      botBar.style.transform = "none";
+      document.body.style.overflow = "auto";
+    };
+  });
+
+  document.addEventListener('DOMContentLoaded', () => {
+    const sliderContainer = document.querySelector('.overflow-x-auto'); // The slider div
+    const navLinks = document.querySelectorAll('a[href^="#"]');
+    const sections = Array.from(navLinks).map(link => document.querySelector(link.getAttribute('href'))).filter(el => el !== null);
+
+    const activeClasses = ['bg-black', 'scale-110']; // Classes for the active link
+
+    const observerOptions = {
+      root: null,
+      rootMargin: '-150px 0px -70% 0px', // Triggers when section is near the top
+      threshold: 0
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const id = entry.target.getAttribute('id');
+          const activeLink = document.querySelector(`a[href="#${id}"]`);
+
+          if (activeLink) {
+            // 1. Remove active style from all
+            navLinks.forEach(link => link.classList.remove(...activeClasses));
+            
+            // 2. Add active style to current
+            activeLink.classList.add(...activeClasses);
+
+            // 3. Auto-center the active link in the horizontal slider
+            activeLink.scrollIntoView({
+              behavior: 'smooth',
+              inline: 'center',
+              block: 'nearest'
+            });
+          }
+        }
+      });
+    }, observerOptions);
+
+    sections.forEach(section => observer.observe(section));
+  });
+
+
+  // Function to trigger the fancy toast
+  function showToast(message) {
+    const toast = document.getElementById('toast');
+    const msgSpan = document.getElementById('toast-message');
+    
+    msgSpan.innerText = message;
+    toast.classList.add('toast-show');
+    
+    setTimeout(() => {
+      toast.classList.remove('toast-show');
+    }, 2500);
+  }
+
+  // Function to update the badge count
+  function updateCartBadge() {
+    const basket = JSON.parse(localStorage.getItem('basket')) || [];
+    const count = basket.reduce((acc, item) => acc + (item.qty || 1), 0);
+    const badge = document.getElementById('cart-count');
+    
+    badge.innerText = count;
+    
+    // Pulse effect when count changes
+    badge.classList.add('scale-125');
+    setTimeout(() => badge.classList.remove('scale-125'), 200);
+  }
+
+  // Run on page load
+  updateCartBadge();
+
+  function addToCart(name, price) {
+  // 1. Get current basket
+  let basket = JSON.parse(localStorage.getItem('basket')) || [];
+
+  // 2. Check if item already exists to increment quantity
+  const existingItem = basket.find(item => item.name === name);
+
+  if (existingItem) {
+    existingItem.qty = (existingItem.qty || 1) + 1;
+  } else {
+    // Add new item with qty 1
+    basket.push({ name: name, price: price, qty: 1 });
+  }
+
+  // 3. Save back to LocalStorage
+  localStorage.setItem('basket', JSON.stringify(basket));
+
+  // 4. Trigger UI Updates
+  showToast(`Added ${name} to basket!`);
+  updateCartBadge(); // This updates the number on your floating red button
+}
+
+// Ensure the badge is correct when the user first opens the page
+document.addEventListener('DOMContentLoaded', updateCartBadge);
+
+
+    let currentOffer = 0;
+    const totalOffers = 4;
+    const offerWrapper = document.getElementById('offer-slides');
+    const offerDots = document.querySelectorAll('.offer-dot');
+    const touchArea = document.getElementById('touch-area');
+
+    function updateOffers(idx) {
+        currentOffer = idx;
+        offerWrapper.style.transform = `translateX(-${idx * 100}%)`;
+        offerDots.forEach((d, i) => {
+            d.style.width = i === idx ? '24px' : '8px';
+            d.style.background = i === idx ? 'white' : 'rgba(255,255,255,0.5)';
+        });
+    }
+
+    function nextOffer() {
+        currentOffer = (currentOffer + 1) % totalOffers;
+        updateOffers(currentOffer);
+    }
+
+    function prevOffer() {
+        currentOffer = (currentOffer - 1 + totalOffers) % totalOffers;
+        updateOffers(currentOffer);
+    }
+
+    // SWIPE LOGIC
+    let startX = 0;
+    touchArea.addEventListener('touchstart', e => startX = e.touches[0].clientX);
+    touchArea.addEventListener('touchend', e => {
+        let endX = e.changedTouches[0].clientX;
+        if (startX - endX > 50) nextOffer(); // Swipe Left
+        if (startX - endX < -50) prevOffer(); // Swipe Right
+    });
+
+    // Auto Cycle (stops on interaction)
+    let autoPlay = setInterval(nextOffer, 5000);
+    touchArea.addEventListener('mouseenter', () => clearInterval(autoPlay));
+
+    updateOffers(0);
+
+
+  (function() {
+    const btn = document.getElementById('menuBtn');
+    const menu = document.getElementById('mobileMenu');
+    const b1 = document.getElementById('bar1');
+    const b2 = document.getElementById('bar2');
+    const b3 = document.getElementById('bar3');
+
+    // --- NEW LOGIC: Close menu when a link is clicked ---
+    const menuLinks = menu ? menu.querySelectorAll('a') : [];
+    menuLinks.forEach(link => {
+      link.onclick = function() {
+        // Run the "CLOSE" animation and reset states
+        menu.classList.add('invisible', 'opacity-0');
+        b1.style.transform = "none";
+        b2.style.opacity = "1";
+        b3.style.transform = "none";
+        document.body.style.overflow = "auto";
+      };
+    });
+    // ----------------------------------------------------
+
+    if (btn && menu) {
+      btn.onclick = function() {
+        if (menu.classList.contains('invisible')) {
+          // OPEN
+          menu.classList.remove('invisible', 'opacity-0');
+          b1.style.transform = "translateY(10px) rotate(45deg)";
+          b2.style.opacity = "0";
+          b3.style.transform = "translateY(-10px) rotate(-45deg)";
+          document.body.style.overflow = "hidden";
+        } else {
+          // CLOSE
+          menu.classList.add('invisible', 'opacity-0');
+          b1.style.transform = "none";
+          b2.style.opacity = "1";
+          b3.style.transform = "none";
+          document.body.style.overflow = "auto";
+        }
+      };
+    }
+  })();
+
+  // 1. Opens any modal
+function openModal(id) {
+  const modal = document.getElementById(id);
+  if (modal) {
+    modal.classList.remove('hidden');
+    document.body.style.overflow = 'hidden';
+  }
+}
+
+// 2. Closes any modal
+function closeModal(id) {
+  const modal = document.getElementById(id);
+  if (modal) {
+    modal.classList.add('hidden');
+    document.body.style.overflow = 'auto';
+  }
+}
+
+// 3. Gets the value from the radio button and sends it to your existing addToCart
+function addVarietyToCart(modalId, radioName, price) {
+  const selected = document.querySelector(`input[name="${radioName}"]:checked`);
+  
+  if (selected) {
+    const itemName = selected.value;
+    // This calls your existing function that handles localStorage/UI
+    addToCart(itemName, price); 
+    closeModal(modalId);
+  }
+}
+
+
+  
+</script>
+
+<div id="milkTeaModal" class="fixed inset-0 z-[200] hidden bg-black/60 backdrop-blur-sm flex items-center justify-center p-4">
+  <div class="bg-white rounded-3xl max-w-md w-full p-6 shadow-2xl relative">
+    <button onclick="closeModal('milkTeaModal')" class="absolute top-4 right-4 text-2xl font-bold">&times;</button>
+    
+    <h2 class="text-2xl font-bold mb-2">Milk Tea</h2>
+    <p class="text-gray-500 mb-6">Select your favorite flavor:</p>
+
+    <div class="space-y-3">
+      <label class="flex items-center justify-between p-4 border-2 border-gray-100 rounded-2xl cursor-pointer hover:border-[#63c89c] transition has-[:checked]:border-[#63c89c] has-[:checked]:bg-green-50">
+        <span class="font-medium">Masala Tea</span>
+        <input type="radio" name="teaVariety" value="Masala Tea" class="w-5 h-5 accent-[#63c89c]" checked>
+      </label>
+
+       <label class="flex items-center justify-between p-4 border-2 border-gray-100 rounded-2xl cursor-pointer hover:border-[#63c89c] transition has-[:checked]:border-[#63c89c] has-[:checked]:bg-green-50">
+        <span class="font-medium">Karak Tea</span>
+        <input type="radio" name="teaVariety" value="Karak Tea" class="w-5 h-5 accent-[#63c89c]" checked>
+      </label>
+
+      <label class="flex items-center justify-between p-4 border-2 border-gray-100 rounded-2xl cursor-pointer hover:border-[#63c89c] transition has-[:checked]:border-[#63c89c] has-[:checked]:bg-green-50">
+        <span class="font-medium">English Milk Tea</span>
+        <input type="radio" name="teaVariety" value="English Milk Tea" class="w-5 h-5 accent-[#63c89c]">
+      </label>
+    </div>
+
+    <!-- addVarietyToCart(ModalID, InputName, Price) -->
+    <button onclick="addVarietyToCart('milkTeaModal', 'teaVariety', 4000)" class="w-full mt-8 bg-[#63c89c] text-white py-4 rounded-full text-xl font-bold shadow-lg transition">
+      Add to Basket
+    </button>
+  </div>
+</div>
+
+
+</body>
+</html>

@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <title>Responsive Navbar</title>
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Optional font -->
+  <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet">
+
+  <style>
+    .font-abril {
+      font-family: 'Abril Fatface', cursive;
+    }
+@keyframes fadeIn {
+  to { opacity: 1; }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.4s ease-out forwards;
+}
+
+   
+  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>kayy. Kafe & Grill | Daily Offers</title>
+    <link href="https://googleapis.com" rel="stylesheet">
+
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+            background-color: #1a1a1a; /* Dark theme to match Kafe vibe */
+            color: white;
+        }
+
+        /* HERO SLIDESHOW SECTION */
+        .slider-container {
+            position: relative;
+            width: 100%;
+            height: 80vh; /* Takes up 80% of the screen height */
+            overflow: hidden;
+        }
+
+        .slides {
+            display: flex;
+            width: 100%;
+            height: 100%;
+        }
+
+        .slide {
+            min-width: 100%;
+            height: 100%;
+            position: relative;
+            background-size: cover;
+            background-position: center;
+            transition: opacity 1s ease-in-out;
+            display: none; /* Hidden by default, toggled by JS */
+        }
+
+        .slide.active {
+            display: block;
+        }
+
+        /* Overlay for text readability */
+        .slide-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            padding: 50px;
+        }
+
+        .offer-tag {
+            background: #B93D22;
+            border-radius: 20px; /* Savory orange */
+            color: white;
+            padding: 5px 15px;
+            font-weight: 600;
+            text-transform: uppercase;
+            width: fit-content;
+            margin-bottom: 10px;
+        }
+
+        .slide-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 3.5rem;
+            margin: 0;
+        }
+
+        /* Slider Controls */
+        .slider-dots {
+            position: absolute;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 10px;
+            z-index: 10;
+        }
+
+        .dot {
+            width: 12px;
+            height: 12px;
+            background: rgba(255,255,255,0.5);
+            border-radius: 50%;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .dot.active {
+            background: white;
+            transform: scale(1.3);
+        }
+
+        @media (max-width: 768px) {
+            .slider-container { height: 60vh; }
+            .slide-title { font-size: 2rem; }
+            .slide-overlay { padding: 20px; }
+        }
+
+         :root {
+        /* SWAP YOUR PICTURES HERE ONCE */
+        --offer-1: url('thumbnailss/platters.jpg');
+        --offer-2: url('thumbnailss/SB.jpg');
+        --offer-3: url('thumbnailss/egg\ sandwich.jpeg');
+        --offer-4: url('thumbnailss/CB.jpg'); /* Replace with 4th pic */
+    }
+
+    /* This applies the variables to the slides automatically */
+    .slide:nth-child(1) { background-image: var(--offer-1); }
+    .slide:nth-child(2) { background-image: var(--offer-2); }
+    .slide:nth-child(3) { background-image: var(--offer-3); }
+    .slide:nth-child(4) { background-image: var(--offer-4); }
+
+    .slide {
+        background-size: cover;
+        background-position: center;
+        /* rest of your slide CSS... */
+    }
+    </style>
+
+
+</head>
+<body>
+
+        
+<div class="slider-container">
+    <!-- Slide 1 -->
+    <div class="slide active">
+        <div class="slide-overlay">
+            <div class="offer-tag">Monday Special</div>
+            <h2 class="slide-title">Double Smash Burgers - 20% Off</h2>
+        </div>
+    </div>
+
+    <!-- Slide 2 -->
+    <div class="slide">
+        <div class="slide-overlay">
+            <div class="offer-tag">Daily Deal</div>
+            <h2 class="slide-title">Unlimited Coffee with Breakfast</h2>
+        </div>
+    </div>
+
+    <!-- Slide 3 -->
+    <div class="slide">
+        <div class="slide-overlay">
+            <div class="offer-tag">Limited Time</div>
+            <h2 class="slide-title">Spicy Grill Platter for Two</h2>
+        </div>
+    </div>
+
+    <!-- Slide 4 -->
+    <div class="slide">
+        <div class="slide-overlay">
+            <div class="offer-tag">Weekend Treat</div>
+            <h2 class="slide-title">Free Appetizer with Main Grill</h2>
+        </div>
+    </div>
+</div>
+
+
+       
+    </div>
+
+    <!-- Section: Menu Call to Action -->
+<section class="bg-zinc-950 py-12 px-6">
+    <div class="max-w-4xl mx-auto text-center">
+        
+        <!-- The Button -->
+        <a href="kayyKafe.html" 
+           class="group relative inline-flex items-center justify-center px-12 py-5 font-bold text-white transition-all duration-300 bg-[#b93d22] rounded-lg hover:bg-orange-500 hover:shadow-[0_0_20px_rgba(234,88,12,0.4)] active:scale-95 w-full md:w-auto">
+            
+            <span class="tracking-[0.2em] uppercase text-md">Explore Full Menu</span>
+            
+            <!-- Small arrow icon that moves on hover -->
+            <svg xmlns="http://w3.org" 
+                 class="h-6 w-6 ml-3 transition-transform duration-300 group-hover:translate-x-2" 
+                 fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+            </svg>
+        </a>
+
+
+    </div>
+</section>
+
+<!-- ABOUT US SECTION -->
+<section class="bg-zinc-900 py-20 px-6">
+    <div class="max-w-6xl mx-auto">
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+            
+            <!-- Image Side: A "Split" style photo or collage -->
+            <div class="relative group">
+                <div class="absolute -inset-1 bg-gradient-to-r from-orange-600 to-rose-400 rounded-lg blur opacity-25 group-hover:opacity-50 transition duration-1000"></div>
+                <div class="relative bg-zinc-800 rounded-lg overflow-hidden shadow-2xl">
+                    <!-- Replace with a photo of the siblings or the storefront -->
+                    <img src="thumbnailss/HK.jpg" alt="The Founders" class="w-full h-[500px] object-cover opacity-80 hover:opacity-100 transition-opacity">
+                    <div class="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-black/80 to-transparent">
+                        <p class="text-sm font-semibold tracking-widest uppercase text-[#b93d22]">Established 2024</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Text Side -->
+            <div class="space-y-6">
+                <h3 class="text-[#b93d22] font-bold uppercase tracking-widest text-sm">Two Dreams, One Roof</h3>
+                <h2 class="text-4xl md:text-5xl font-display text-white">The Sibling Connection</h2>
+                
+                <p class="text-zinc-400 leading-relaxed text-lg">
+                    What happens when a passion for the grill meets a love for the perfect scoop? You get <span class="text-white font-semibold">kayy. Kafe & The Scoop</span>. 
+                </p>
+                
+                <p class="text-zinc-400 leading-relaxed">
+                    Founded by a brother and sister duo, our space was built on the belief that a great meal isn't finished until the dessert arrives. He brings the fire with signature grills and savory bites at <span class="text-[#b93d22] font-medium">kayy. Kafe</span>, while she masters the art of artisan coffee and hand-scooped treats at <span class="text-[#b93d22] font-medium">The Scoop</span>.
+                </p>
+
+                <div class="grid grid-cols-2 gap-6 pt-6 border-t border-zinc-800">
+                    <div>
+                        <h4 class="text-white font-bold text-xl mb-2">The Grill</h4>
+                        <p class="text-zinc-500 text-sm">Bold, savory flavors and hearty meals crafted with passion.</p>
+                    </div>
+                    <div>
+                        <h4 class="text-white font-bold text-xl mb-2">The Scoop</h4>
+                        <p class="text-zinc-500 text-sm">Sweet finishes and artisanal brews to round out the experience.</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- FOOTER SECTION -->
+<footer class="bg-zinc-950 text-zinc-400 py-16 px-6 border-t border-zinc-800">
+    <div class="max-w-7xl mx-auto">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+            
+            <!-- Brand Column -->
+          <div class="space-y-6">
+    <!-- Logos Row: Now Left to Right -->
+   <div class="space-y-6">
+    <!-- Logos Row -->
+    <div class="flex items-center space-x-4">
+        <img src="thumbnailss/kayydot.PNG" alt="kayy. Logo" class="h-24 w-auto rounded-full hover:grayscale-0 transition-all duration-300">
+        <img src="thumbnailss/two cones.PNG" alt="The Scoop Logo" class="h-24 w-auto rounded-full hover:grayscale-0 transition-all duration-300">
+    </div>
+
+    <p class="text-sm leading-relaxed text-zinc-400">
+        A unique sibling-run destination where savory grills meet artisan sweets. Two concepts, one unforgettable experience.
+    </p>
+
+    <!-- Updated Social Icons Row -->
+    <div class="flex flex-wrap items-center gap-5">
+        <!-- Instagram -->
+        <a href="#" class="text-zinc-400 hover:text-orange-500 transition-colors">
+            <span class="sr-only">Instagram</span>
+            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+        </a>
+
+        <!-- TikTok -->
+        <a href="#" class="text-zinc-400 hover:text-white transition-colors">
+            <span class="sr-only">TikTok</span>
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 448 512"><path d="M448 209.91a210.06 210.06 0 0 1-122.77-39.25V349.38A162.55 162.55 0 1 1 185 188.31V278.2a74.62 74.62 0 1 0 52.23 71.18V0l88 0a121.18 121.18 0 0 0 1.86 22.17A122.18 122.18 0 0 0 381 102.39a121.43 121.43 0 0 0 67 20.14Z"/></svg>
+        </a>
+
+     <!-- Authentic Facebook Icon -->
+<a href="YOUR_FACEBOOK_PAGE_URL" target="_blank" class="text-zinc-400 hover:text-[#1877F2] transition-all duration-300 transform hover:scale-110">
+    <span class="sr-only">Facebook</span>
+    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://w3.org">
+        <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.469h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+    </svg>
+</a>
+
+
+
+        <!-- Google Reviews -->
+        <a href="https://google.com" target="_blank" class="text-zinc-400 hover:text-blue-400 transition-colors">
+            <span class="sr-only">Google Reviews</span>
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 488 512"><path d="M488 261.8C488 403.3 391.1 504 248 504 110.8 504 0 393.2 0 256S110.8 8 248 8c66.8 0 123 24.5 166.3 64.9l-67.5 64.9C258.5 52.6 94.3 116.6 94.3 256c0 86.5 69.1 156.6 153.7 156.6 98.2 0 135-70.4 140.8-106.9H248v-85.3h236.1c2.3 12.7 3.9 24.9 3.9 41.4z"/></svg>
+        </a>
+    </div>
+</div>
+</div>
+
+
+            <!-- Kayy. Kafe Links -->
+            <div>
+                <h4 class="text-white font-bold uppercase tracking-widest text-xs mb-6">kayy. Kafe & Grill</h4>
+                <ul class="space-y-4 text-sm">
+                    <li><a href="#" class="hover:text-orange-500 transition-colors">Main Menu</a></li>
+                    <li><a href="#" class="hover:text-orange-500 transition-colors">Daily Specials</a></li>
+                    <li><a href="#" class="hover:text-orange-500 transition-colors">Steaks & Grills</a></li>
+                    <li><a href="#" class="hover:text-orange-500 transition-colors">Online Ordering</a></li>
+                </ul>
+            </div>
+
+            <!-- The Scoop Links -->
+            <div>
+                <h4 class="text-white font-bold uppercase tracking-widest text-xs mb-6">The Scoop</h4>
+                <ul class="space-y-4 text-sm">
+                    <li><a href="#" class="hover:text-rose-400 transition-colors">Gelato Flavors</a></li>
+                    <li><a href="#" class="hover:text-rose-400 transition-colors">Coffee Bar</a></li>
+                    <li><a href="#" class="hover:text-rose-400 transition-colors">Waffles & Crepes</a></li>
+                    <li><a href="#" class="hover:text-rose-400 transition-colors">Party Buckets</a></li>
+                </ul>
+            </div>
+
+            <!-- Contact & Hours -->
+            <div class="space-y-4 text-sm">
+                <h4 class="text-white font-bold uppercase tracking-widest text-xs mb-6">Visit Us</h4>
+                <p>123 Restaurant Row,<br>City Name, State 12345</p>
+                <p class="text-white font-medium">Mon - Sun: 10:00 AM - 11:00 PM</p>
+                <p class="pt-2">Email: <a href="mailto:hello@kayy.com" class="text-[#b93d22]">hello@kayy.com</a></p>
+                <p>Phone: <a href="tel:+123456789" class="text-[#b93d22]">(123) 456-7890</a></p>
+            </div>
+        </div>
+
+        <!-- Copyright -->
+        <div class="pt-8 border-t border-zinc-900 flex flex-col md:flex-row justify-between items-center text-xs">
+            <p>&copy; 2024 kayy. Kafe & The Scoop. All Rights Reserved.</p>
+            <div class="flex space-x-6 mt-4 md:mt-0">
+                <a href="#" class="hover:text-white transition-colors">Privacy Policy</a>
+                <a href="#" class="hover:text-white transition-colors">Terms of Service</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+    <script>
+        let slideIndex = 0;
+        const slides = document.querySelectorAll('.slide');
+        const dots = document.querySelectorAll('.dot');
+
+        function showSlides() {
+            slides.forEach(slide => slide.classList.remove('active'));
+            dots.forEach(dot => dot.classList.remove('active'));
+            
+            slideIndex++;
+            if (slideIndex > slides.length) { slideIndex = 1; }
+            
+            slides[slideIndex-1].classList.add('active');
+            dots[slideIndex-1].classList.add('active');
+            
+            setTimeout(showSlides, 5000); // Change image every 5 seconds
+        }
+
+        function currentSlide(n) {
+            slideIndex = n;
+            slides.forEach(slide => slide.classList.remove('active'));
+            dots.forEach(dot => dot.classList.remove('active'));
+            slides[n].classList.add('active');
+            dots[n].classList.add('active');
+        }
+
+        showSlides(); // Start the slideshow
+    </script>
+
+</body>
+</html>

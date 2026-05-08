@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Basket</title>
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    @import url('https://googleapis.com');
+    body { font-family: 'Poppins', sans-serif; }
+  </style>
+</head>
+
+<body style="font-family: abril-fatface" class="bg-white text-black p-4 sm:p-6 md:p-10 text-base sm:text-lg">
+
+  
+<header class="fixed top-0 left-0 w-full z-[100] transition-all duration-300">
+  <div class="w-full border-b border-white bg-white backdrop-blur-xl ">
+    <div class="max-w-7xl mx-auto flex items-center justify-between px-6 py-3">
+      <!-- LEFT -->
+      <div class="flex-1">
+       <a 
+  href="javascript:history.back()" 
+  class="inline-block hover:scale-110 transition-transform"
+>
+  <img 
+    src="thumbnails/left.png" 
+    class="h-10 w-10 border border-black rounded-full p-2" 
+    alt="Go Back"
+  >
+</a>
+
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- DUAL LOGO HEADER -->
+<div class="flex flex-col items-center justify-center mb-8 mt-20 px-4">
+  <div class="flex items-center justify-center space-x-4 sm:space-x-8">
+    
+    <!-- RESTAURANT LOGO -->
+    <div class="flex flex-col items-center">
+      <img 
+        src="images/kayydot.PNG" 
+        class="h-24 sm:h-40 md:h-52 w-auto object-contain" 
+        alt="Restaurant Logo" 
+      />
+    </div>
+
+    <!-- DESSERT CAFE LOGO -->
+    <div class="flex flex-col items-center">
+      <!-- Swap this src for your Dessert logo file -->
+      <img 
+        src="images/two cones.PNG" 
+        class="h-24 sm:h-40 md:h-52 w-auto object-contain" 
+        alt="Dessert Cafe Logo" 
+      />
+    </div>
+
+  </div>
+  
+  <!-- OPTIONAL SUBTITLE -->
+  <p class="mt-6 text-gray-400 font-medium tracking-tight text-center italic">
+    One Basket • Two Experiences
+  </p>
+</div>
+
+
+  <!-- BASKET CONTAINER -->
+  <div class="max-w-3xl mx-auto bg-[#b93d22]/10 rounded-2xl p-6 mb-20 sm:p-10 shadow-sm">
+
+    <div class="flex justify-between items-center mb-6">
+      <h2 class="text-2xl sm:text-3xl font-bold">Your Basket</h2>
+      <button id="clear-all" onclick="clearBasket()" class="text-red-600 font-semibold hover:underline hidden">
+        Clear All
+      </button>
+    </div>
+
+    <!-- ITEMS -->
+    <div id="basket-items" class="space-y-6"></div>
+
+    <!-- SUBTOTAL -->
+    <div class="mt-8 pt-6 border-t-2 border-gray-200">
+      <p id="basket-total" class="text-2xl sm:text-3xl font-bold text-right">
+        Subtotal: 0 /=
+      </p>
+    </div>
+
+    <!-- SERVICE METHOD DROPDOWN -->
+<div class="mt-8">
+  <label for="service-method" class="block mb-4 text-xl sm:text-2xl font-bold">
+    How would you like your order?
+  </label>
+  <div class="relative">
+    <select
+      id="service-method"
+      class="w-full appearance-none bg-white rounded-xl border-2 border-gray-300 p-4 text-base sm:text-lg focus:border-[#b93d22] focus:outline-none transition cursor-pointer"
+    >
+      <option value="Dine-in">Dine-in</option>
+      <option value="Pickup">Take-Away</option>
+      <option value="Delivery"> Delivery</option>
+    </select>
+    <!-- Custom Arrow -->
+    <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-4 text-gray-700">
+      <i class="fas fa-chevron-down"></i>
+    </div>
+  </div>
+</div>
+
+
+    <!-- COMMENT -->
+    <div class="mt-10">
+      <label for="order-comment" class="block mb-4 text-xl sm:text-2xl font-bold">
+        Add a comment (optional):
+      </label>
+      <textarea
+        id="order-comment"
+        placeholder="Delivery instructions, preferences, etc..."
+        class="w-full rounded-xl border-2 border-gray-300 p-4 text-base sm:text-lg focus:border-[#b93d22] focus:outline-none transition"
+        rows="3"
+      ></textarea>
+    </div>
+
+    <!-- PLACE ORDER -->
+    <button
+      id="place-order"
+      class="mt-12 w-full bg-[#b93d22] hover:bg-[#a3361f] text-white py-5 sm:py-6 rounded-full text-xl sm:text-2xl font-bold transition-all shadow-lg active:scale-[0.98]"
+    >
+      Order Now
+    </button>
+
+    <!-- BACK BUTTON (Visible only when empty) -->
+    <div id="back-to-shop" class="hidden text-center mt-6">
+       <a 
+  href="javascript:history.back()" class="text-[#b93d22] font-semibold hover:underline">
+         ← Back to Menu
+       </a>
+    </div>
+
+  </div>
+
+ <script>
+  let basket = JSON.parse(localStorage.getItem('basket')) || [];
+
+  const basketItems = document.getElementById('basket-items');
+  const basketTotal = document.getElementById('basket-total');
+  const placeOrderBtn = document.getElementById('place-order');
+  const commentBox = document.getElementById('order-comment');
+  const clearBtn = document.getElementById('clear-all');
+  const backToShop = document.getElementById('back-to-shop');
+
+  function renderBasket() {
+    basketItems.innerHTML = '';
+    let total = 0;
+
+    if (basket.length === 0) {
+      basketItems.innerHTML = `
+        <div class="py-12 text-center">
+          <p class="text-2xl sm:text-3xl text-gray-500 mb-6">Your basket is empty.</p>
+        </div>
+      `;
+      basketTotal.textContent = 'Subtotal: 0 /=';
+      placeOrderBtn.style.display = 'none';
+      clearBtn.style.display = 'none';
+      backToShop.classList.remove('hidden');
+      return;
+    }
+
+    placeOrderBtn.style.display = 'block';
+    clearBtn.style.display = 'block';
+    backToShop.classList.add('hidden');
+
+    basket.forEach((item, index) => {
+      // Ensure quantity exists
+      if (!item.qty) item.qty = 1;
+      
+      const itemSubtotal = Number(item.price) * item.qty;
+      total += itemSubtotal;
+
+      const row = document.createElement('div');
+      row.className = 'flex justify-between items-center border-b border-gray-200 pb-6';
+
+      row.innerHTML = `
+        <div class="flex-1">
+          <h3 class="text-lg sm:text-xl font-bold text-gray-800 line-clamp-1">${item.name}</h3>
+          <p class="text-[#b93d22] font-semibold">${item.price} /=</p>
+        </div>
+
+        <div class="flex items-center gap-4">
+          <!-- Quantity Selector -->
+          <div class="flex items-center bg-white border-2 border-gray-200 rounded-lg overflow-hidden">
+            <button onclick="updateQty(${index}, -1)" class="px-3 py-1 hover:bg-gray-100 font-bold transition">-</button>
+            <span class="px-3 font-bold text-gray-700 min-w-[40px] text-center">${item.qty}</span>
+            <button onclick="updateQty(${index}, 1)" class="px-3 py-1 hover:bg-gray-100 font-bold transition">+</button>
+          </div>
+
+          <!-- Remove Button -->
+          <button onclick="removeItem(${index})" class="p-2 hover:bg-red-50 rounded-full transition group">
+            <img src="images/icons8-delete-trash-50.png" class="w-8 sm:w-10 opacity-80 group-hover:opacity-100" />
+          </button>
+        </div>
+      `;
+
+      basketItems.appendChild(row);
+    });
+
+    basketTotal.textContent = `Subtotal: ${total} /=`;
+  }
+
+  function updateQty(index, change) {
+    basket[index].qty += change;
+    if (basket[index].qty < 1) {
+      removeItem(index);
+    } else {
+      saveAndRender();
+    }
+  }
+
+  function removeItem(index) {
+    basket.splice(index, 1);
+    saveAndRender();
+  }
+
+  function clearBasket() {
+    if(confirm("Empty your basket?")) {
+      basket = [];
+      saveAndRender();
+    }
+  }
+
+  function saveAndRender() {
+    localStorage.setItem('basket', JSON.stringify(basket));
+    renderBasket();
+  }
+
+  placeOrderBtn.addEventListener('click', () => {
+  if (basket.length === 0) return;
+
+  const phone = '255748900088';
+  const serviceMethod = document.getElementById('service-method').value; // Get the dropdown value
+  let message = 'New Order Received\n\n';
+  let subtotal = 0;
+
+  // Add Service Method to top of message
+  message += `Type: ${serviceMethod}\n`;
+  message += `────────────────────\n`;
+
+  basket.forEach(item => {
+    const qty = item.qty || 1;
+    const lineTotal = Number(item.price) * qty;
+    message += `• ${item.name} x${qty} (${lineTotal} /=)\n`;
+    subtotal += lineTotal;
+  });
+
+  message += `\nTotal: ${subtotal} /=`;
+
+  const comment = commentBox.value.trim();
+  if (comment) {
+    message += `\n\nNote: ${comment}`;
+  }
+
+  const url = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
+  window.open(url, '_blank');
+});
+
+
+  renderBasket();
+</script>
+</body>
+</html>
